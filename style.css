@@ -1,0 +1,130 @@
+﻿/* 112 Teaching Practicum - Deep Sea & Oceanic Design System v2 */
+:root {
+  --primary-deep: #070d19;
+  --ocean-blue: #0284c7;
+  --ocean-cyan: #06b6d4;
+  --ocean-teal: #0d9488;
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background-color: #060911;
+  color: #e2e8f0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav {
+  background: rgba(6, 11, 23, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(2, 132, 199, 0.25);
+}
+
+/* Touch Friendly Scrollbars */
+.touch-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.touch-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tab Navigation Active State */
+.tab-btn.active {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.4);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+/* Equalizer Bars Animation */
+.wave-bar {
+  display: inline-block;
+  width: 3px;
+  background: #38bdf8;
+  border-radius: 2px;
+  animation: waveMotion 1.2s infinite ease-in-out alternate;
+}
+.wave-bar:nth-child(1) { height: 8px; animation-delay: 0.1s; }
+.wave-bar:nth-child(2) { height: 14px; animation-delay: 0.3s; }
+.wave-bar:nth-child(3) { height: 10px; animation-delay: 0.2s; }
+.wave-bar:nth-child(4) { height: 16px; animation-delay: 0.4s; }
+
+@keyframes waveMotion {
+  0% { transform: scaleY(0.35); }
+  100% { transform: scaleY(1.15); }
+}
+
+/* Image Grid and Lightbox */
+.gallery-img-card {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-card:hover .gallery-img-card {
+  transform: scale(1.04);
+}
+
+/* Document Reader Authentic Styles */
+.official-doc-paper {
+  background: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  line-height: 1.8;
+}
+
+.kwlq-box-k { border-left: 4px solid #3b82f6; background: #eff6ff; }
+.kwlq-box-w { border-left: 4px solid #10b981; background: #ecfdf5; }
+.kwlq-box-l { border-left: 4px solid #f59e0b; background: #fffbeb; }
+.kwlq-box-q { border-left: 4px solid #8b5cf6; background: #f5f3ff; }
+
+/* Custom Scrollbar for inner modals */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+/* Prevent horizontal overflow globally */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
