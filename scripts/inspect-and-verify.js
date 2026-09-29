@@ -137,16 +137,40 @@ async function runEdgeTests() {
           await send('Runtime.enable');
           await send('Page.enable');
 
+          // Track console errors and exceptions
+          let consoleErrors = [];
+          ws.addEventListener('message', (ev) => {
+            const m = JSON.parse(ev.data);
+            if (m.method === 'Runtime.consoleAPICalled' && m.params.type === 'error') {
+              consoleErrors.push(m.params.args.map(a => a.value || a.description).join(' '));
+            }
+            if (m.method === 'Runtime.exceptionThrown') {
+              consoleErrors.push(m.params.exceptionDetails.text);
+            }
+          });
+
+          // Wait for all data scripts to finish loading
+          for (let i = 0; i < 20; i++) {
+            const ready = await send('Runtime.evaluate', {
+              expression: "!!(window.PRACTICUM_DATA && window.DOCUMENTS_TEXT && window.TEACHER_MEDIA_MAP && window.FILES_INDEX)",
+              returnByValue: true
+            });
+            if (ready.result?.value) break;
+            await sleep(300);
+          }
+
           console.log('\n--- 1. Checking Global App State ---');
           const checkState = await send('Runtime.evaluate', {
             expression: `({
-              hasAppData: !!window.appData,
-              internsCount: window.appData ? (window.appData.interns || []).length : 0,
-              classesCount: window.appData ? (window.appData.classes || []).length : 0,
-              hasDocs: !!window.documentsText,
-              hasMediaMap: !!window.teacherMediaMap,
-              hasFilesIndex: !!window.filesIndex && Array.isArray(window.filesIndex.files),
-              filesCount: window.filesIndex ? window.filesIndex.files.length : 0
+              hasPracticumData: !!window.PRACTICUM_DATA,
+              internsCount: window.PRACTICUM_DATA ? (window.PRACTICUM_DATA.interns || []).length : 0,
+              classesCount: window.PRACTICUM_DATA ? (window.PRACTICUM_DATA.classes || []).length : 0,
+              hasDocsText: !!window.DOCUMENTS_TEXT,
+              docsCount: window.DOCUMENTS_TEXT ? Object.keys(window.DOCUMENTS_TEXT).length : 0,
+              hasTeacherMedia: !!window.TEACHER_MEDIA_MAP,
+              teacherMediaCount: window.TEACHER_MEDIA_MAP ? Object.keys(window.TEACHER_MEDIA_MAP).length : 0,
+              hasFilesIndex: !!window.FILES_INDEX && Array.isArray(window.FILES_INDEX),
+              filesCount: window.FILES_INDEX ? window.FILES_INDEX.length : 0
             })`,
             returnByValue: true
           });
@@ -184,7 +208,7 @@ async function runEdgeTests() {
               cardsSectionVisible: !document.getElementById('tm-406-card-section').classList.contains('hidden'),
               cardsCount: document.querySelectorAll('#tm-406-cards-grid > div').length,
               photosCount: document.querySelectorAll('#tm-photos-grid > div').length,
-              docsCount: document.querySelectorAll('#tm-documents-list > div').length
+              docsCount: document.querySelectorAll('#tm-documents-list > button').length
             })`,
             returnByValue: true
           });
@@ -308,9 +332,12 @@ async function runEdgeTests() {
             mobile: false
           });
           await sleep(500);
-          const shotTablet = await send('Page.captureScreenshot', { format: 'png' });
-          fs.writeFileSync(path.join(CURRENT_CONV_DIR, '12_tablet_overview.png'), Buffer.from(shotTablet.data, 'base64'));
-          console.log('✅ Saved 12_tablet_overview.png');
+          console.log('\n--- 12. Browser Console Errors & Exceptions ---');
+          if (consoleErrors.length === 0) {
+            console.log('✅ 0 Console Errors or Exceptions detected during the entire run!');
+          } else {
+            console.warn('⚠️ Console Errors detected:', consoleErrors);
+          }
 
           console.log('\n🎉 ALL INSPECTIONS & CAPTURES COMPLETED WITH 100% SUCCESS!');
         } catch (err) {
