@@ -1,11 +1,11 @@
-﻿const http = require('http');
+const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
 
 const PORT = process.env.PORT || 3000;
 const ROOT_DIR = __dirname;
-const MEDIA_ROOT = "G:\\我的雲端硬碟\\112上-小教教學實習-20260830T083306Z-1-001\\112上-小教教學實習";
+const MEDIA_ROOT = process.env.MEDIA_ROOT || (fs.existsSync("G:\\我的雲端硬碟") ? "G:\\我的雲端硬碟\\112上-小教教學實習-20260830T083306Z-1-001\\112上-小教教學實習" : path.join(ROOT_DIR, 'assets'));
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
