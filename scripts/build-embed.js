@@ -72,6 +72,7 @@ const htmlContent = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
   <title>112學年度小教教學實習成果展 ‧ 52赫茲同頻共振 (Google Sites Lighting 版)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -1073,11 +1074,22 @@ const htmlContent = `<!DOCTYPE html>
       handleSearch('');
     }
 
-    // Initialize on DOM load
-    document.addEventListener('DOMContentLoaded', () => {
+    // Robust initialization for iframe & Google Sites
+    function initEmbed() {
       renderClassesAndTeachers();
       renderTrials();
-      if (window.lucide) lucide.createIcons();
+      
+      // Retry lucide until loaded
+      let lucideAttempts = 0;
+      function renderIcons() {
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+        } else if (lucideAttempts < 30) {
+          lucideAttempts++;
+          setTimeout(renderIcons, 100);
+        }
+      }
+      renderIcons();
 
       // Unlock audio on first user gesture
       const unlockAudio = async () => {
@@ -1085,7 +1097,13 @@ const htmlContent = `<!DOCTYPE html>
         ['click', 'touchstart', 'keydown'].forEach(evt => window.removeEventListener(evt, unlockAudio, true));
       };
       ['click', 'touchstart', 'keydown'].forEach(evt => window.addEventListener(evt, unlockAudio, { once: true, capture: true, passive: true }));
-    });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initEmbed);
+    } else {
+      initEmbed();
+    }
   </script>
 </body>
 </html>
