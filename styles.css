@@ -81,6 +81,8 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   color-scheme: dark;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -91,6 +93,7 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -149,7 +152,7 @@ h1, h2, h3, h4, h5 {
   -webkit-text-fill-color: transparent;
 }
 
-/* Navbar */
+/* Top Sticky Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -161,6 +164,30 @@ h1, h2, h3, h4, h5 {
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border-subtle);
   transition: all 0.3s ease;
+  padding-top: max(0px, env(safe-area-inset-top));
+}
+
+/* Mobile Navigation Backdrop */
+.nav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(2, 6, 16, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
+.nav-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .nav-content {
@@ -396,6 +423,8 @@ body.in-iframe .navbar {
   min-height: 90vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  max-width: 100vw;
 }
 
 .hero-ambient-glow {
@@ -418,6 +447,14 @@ body.in-iframe .navbar {
   align-items: center;
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-text-col,
+.hero-visual-col {
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* Academic Pill Badge */
@@ -641,7 +678,8 @@ body.in-iframe .navbar {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
   position: relative;
   cursor: pointer;
-  max-width: 520px;
+  max-width: min(100%, 520px);
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -779,6 +817,8 @@ body.in-iframe .navbar {
   padding: 5rem 0;
   position: relative;
   z-index: 2;
+  overflow: hidden;
+  max-width: 100vw;
 }
 
 .section-header {
@@ -2169,59 +2209,95 @@ body.in-iframe .navbar {
 .lightbox-btn-prev { left: 1rem; }
 .lightbox-btn-next { right: 1rem; }
 
+/* Mobile Touch Controls inside Lightbox (Visible on Tablet/Mobile) */
+.lightbox-mobile-controls {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.lightbox-mobile-nav-btn {
+  flex: 1;
+  background: rgba(45, 212, 191, 0.14);
+  border: 1px solid var(--border-teal);
+  color: var(--teal-300);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  transition: all 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lightbox-mobile-nav-btn:active {
+  background: var(--teal-400);
+  color: #050a14;
+}
+
+.lightbox-touch-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
 /* ===================================================================
-   RESPONSIVE DESIGN BREAKPOINTS (Tablet Landscape, Portrait, Mobile)
+   COMPREHENSIVE RESPONSIVE DESIGN BREAKPOINTS SYSTEM
+   Tier 1: 1025px - 1260px (Compact Laptop / Surface Landscape)
+   Tier 2: <= 1024px (Tablets / iPad Portrait & Landscape)
+   Tier 3: <= 900px (Tablet Portrait / Phablets)
+   Tier 4: <= 768px (Mobile & Small Tablets)
+   Tier 5: <= 640px (Standard Smartphones)
+   Tier 6: <= 480px (Compact Phones / iPhone SE)
+   Tier 7: <= 360px (Extra Narrow Mobile Viewports)
+   Tier 8: Landscape Mobile (Height <= 520px)
    =================================================================== */
 
-/* 1. Large Tablet / Laptop Screen (max-width: 1120px) */
-@media (max-width: 1120px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+/* -------------------------------------------------------------
+   Tier 1: Compact Laptop / Surface Landscape (1025px - 1260px)
+   ------------------------------------------------------------- */
+@media (max-width: 1260px) and (min-width: 1025px) {
+  .nav-links {
+    gap: 0.95rem;
   }
-  .whale-featured-card {
-    max-width: 580px;
+  .nav-links a {
+    font-size: 0.86rem;
+    padding: 0.35rem 0.2rem;
+  }
+  .brand-title {
+    font-size: 0.98rem;
+  }
+  .brand-sub {
+    font-size: 0.68rem;
+  }
+  .audio-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.82rem;
+  }
+  .open-tab-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
   .classes-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .ceremony-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .archives-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .leaders-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .divisions-bento-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
-/* 2. Tablet Portrait (max-width: 900px) */
-@media (max-width: 900px) {
-  .concept-steps-row {
-    grid-template-columns: 1fr;
-  }
-  .wisdom-grid-layout {
-    grid-template-columns: 1fr;
-    gap: 1.8rem;
-  }
-  .footer-top-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-}
-
-/* 3. Mobile Viewport & Tablet Menu (max-width: 768px) */
-@media (max-width: 768px) {
-  /* Container Breathing Room */
-  .container {
-    padding: 0 1.25rem;
-  }
-
-  /* Mobile Navigation Drawer Overlay */
+/* -------------------------------------------------------------
+   Tier 2: Tablets in Portrait & Landscape (max-width: 1024px)
+   ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  /* Navigation Drawer Activation */
   .mobile-toggle {
     display: inline-flex;
   }
@@ -2234,13 +2310,13 @@ body.in-iframe .navbar {
     bottom: 0;
     height: calc(100vh - 72px);
     background: var(--bg-mobile-nav);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 2.5rem 1.5rem;
-    gap: 1.25rem;
+    padding: 2.2rem 1.5rem max(2rem, env(safe-area-inset-bottom));
+    gap: 1rem;
     z-index: 1500;
     overflow-y: auto;
     opacity: 0;
@@ -2258,25 +2334,151 @@ body.in-iframe .navbar {
   }
 
   .nav-links a {
-    font-size: 1.18rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    padding: 0.85rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     width: 100%;
+    max-width: 520px;
     text-align: center;
     border-radius: var(--radius-sm);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.035);
     border: 1px solid var(--border-subtle);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-links a:hover,
   .nav-links a.active {
-    background: rgba(45, 212, 191, 0.15);
+    background: rgba(45, 212, 191, 0.16);
     border-color: var(--teal-400);
+    color: var(--teal-300);
   }
 
-  /* Hero Section */
+  /* Grids for Tablet */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+  }
+
+  .whale-featured-card {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .classes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .ceremony-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .archives-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .leaders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+  }
+
+  .divisions-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   Tier 3: Tablet Portrait & Large Phablets (max-width: 900px)
+   ------------------------------------------------------------- */
+@media (max-width: 900px) {
+  /* Timeline Single-Rail on Tablet Portrait */
+  .timeline-track::before {
+    left: 22px;
+  }
+
+  .timeline-item {
+    width: 100% !important;
+    text-align: left !important;
+    padding-left: 54px !important;
+    padding-right: 0 !important;
+    left: 0 !important;
+    margin-bottom: 2.4rem;
+  }
+
+  .timeline-dot {
+    left: 12px !important;
+    right: auto !important;
+    top: 1.1rem;
+  }
+
+  .timeline-location {
+    justify-content: flex-start !important;
+  }
+
+  .timeline-card {
+    padding: 1.5rem;
+  }
+
+  .concept-steps-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .wisdom-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   Tier 4: Mobile & Small Tablets (max-width: 768px)
+   ------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Compact Ambient Glow for Mobile GPU Efficiency */
+  .hero-ambient-glow {
+    width: 280px;
+    height: 280px;
+    right: -20px;
+    top: 5%;
+    filter: blur(50px);
+    opacity: 0.6;
+  }
+
+  /* Compact Navbar Actions for Mobile & Small Tablets */
+  .audio-btn .audio-text {
+    display: none;
+  }
+
+  .audio-btn::after {
+    content: '52Hz';
+    font-weight: 700;
+  }
+
+  .open-tab-btn span {
+    font-size: 0.78rem;
+  }
+
+  .open-tab-btn {
+    padding: 0.4rem 0.75rem;
+  }
+
   .hero-section {
-    padding: 100px 0 45px;
+    padding: 95px 0 40px;
     min-height: auto;
   }
 
@@ -2291,17 +2493,11 @@ body.in-iframe .navbar {
     scrollbar-width: none;
     flex-wrap: nowrap;
     padding-bottom: 0.5rem;
+    padding-right: 1rem;
   }
 
   .quick-jump-bar::-webkit-scrollbar {
     display: none;
-  }
-
-  /* Privacy Banner on Mobile */
-  .privacy-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
   }
 
   /* Single Column Classes on Mobile */
@@ -2312,6 +2508,12 @@ body.in-iframe .navbar {
   .classes-filter-bar {
     flex-direction: column;
     align-items: stretch;
+    gap: 1rem;
+  }
+
+  .grade-tabs-wrap {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .search-box-wrap {
@@ -2331,6 +2533,7 @@ body.in-iframe .navbar {
     scrollbar-width: none;
     flex-wrap: nowrap;
     padding-bottom: 0.6rem;
+    padding-right: 1rem;
   }
 
   .ceremony-filter-pills::-webkit-scrollbar {
@@ -2345,6 +2548,7 @@ body.in-iframe .navbar {
     scrollbar-width: none;
     flex-wrap: nowrap;
     padding-bottom: 0.6rem;
+    padding-right: 1rem;
   }
 
   .archives-tabs-nav::-webkit-scrollbar {
@@ -2364,37 +2568,9 @@ body.in-iframe .navbar {
     grid-template-columns: 1fr;
   }
 
-  /* Timeline Single Rail on Mobile */
-  .timeline-track::before {
-    left: 18px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    text-align: left !important;
-    padding-left: 48px !important;
-    padding-right: 0 !important;
-    left: 0 !important;
-    margin-bottom: 2.5rem;
-  }
-
-  .timeline-dot {
-    left: 9px !important;
-    right: auto !important;
-    top: 1.1rem;
-  }
-
-  .timeline-location {
-    justify-content: flex-start !important;
-  }
-
-  .timeline-card {
-    padding: 1.4rem;
-  }
-
   /* Quotes Carousel on Mobile */
   .quote-card-display {
-    padding: 2.2rem 1.5rem;
+    padding: 2.2rem 1.4rem;
     min-height: 240px;
   }
 
@@ -2402,71 +2578,118 @@ body.in-iframe .navbar {
     font-size: 3.5rem;
   }
 
-  /* Lightbox Modal on Mobile */
+  /* Lightbox Modal on Mobile (Thumb-Friendly Touch Controls) */
   .lightbox-content-box {
     grid-template-columns: 1fr;
-    max-height: 92vh;
+    max-height: 90vh;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-md);
   }
 
   .lightbox-media-col {
-    min-height: 240px;
-    max-height: 48vh;
+    min-height: 220px;
+    max-height: 44vh;
+    background: #020610;
+  }
+
+  .lightbox-media-col img {
+    max-height: 44vh;
   }
 
   .lightbox-meta-col {
-    padding: 1.5rem 1.3rem;
+    padding: 1.4rem 1.2rem;
   }
 
   .lightbox-caption-title {
     font-size: 1.2rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
   }
 
   .lightbox-caption-text {
     font-size: 0.88rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
   }
 
+  /* Hide floating arrows on mobile to prevent blocking text */
   .lightbox-arrow-btn {
+    display: none;
+  }
+
+  /* Display bottom mobile controls bar */
+  .lightbox-mobile-controls {
+    display: flex;
+  }
+
+  .lightbox-close-icon {
+    top: 0.75rem;
+    right: 0.75rem;
     width: 42px;
     height: 42px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    z-index: 30;
   }
-
-  .lightbox-btn-prev { left: 0.5rem; }
-  .lightbox-btn-next { right: 0.5rem; }
 }
 
-/* 4. Small Mobile Phones (max-width: 480px) */
+/* -------------------------------------------------------------
+   Tier 5: Standard Smartphones (max-width: 640px)
+   ------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .privacy-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .open-tab-btn span {
+    font-size: 0.78rem;
+  }
+  
+  .open-tab-btn {
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   Tier 6: Compact Smartphones / iPhone SE (max-width: 480px)
+   ------------------------------------------------------------- */
 @media (max-width: 480px) {
   .container {
     padding: 0 1rem;
   }
 
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.8rem;
+  /* Navbar Compact Layout */
+  .nav-content {
+    height: 64px;
   }
 
-  .hero-actions .btn-primary,
-  .hero-actions .btn-secondary {
-    width: 100%;
+  .nav-brand {
+    gap: 0.6rem;
+  }
+
+  .brand-icon-wrap {
+    width: 36px;
+    height: 36px;
+    font-size: 1.15rem;
+  }
+
+  .brand-title {
+    font-size: 0.92rem;
   }
 
   .brand-sub {
     display: none;
   }
 
-  .brand-title {
-    font-size: 0.96rem;
+  .nav-actions {
+    gap: 0.4rem;
   }
 
   .audio-btn {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.78rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.76rem;
+    min-height: 38px;
   }
 
   .audio-btn .audio-text {
@@ -2478,8 +2701,52 @@ body.in-iframe .navbar {
     font-weight: 700;
   }
 
+  .open-tab-btn {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.76rem;
+    min-height: 38px;
+    min-width: 38px;
+    justify-content: center;
+  }
+
+  .open-tab-btn span {
+    display: none;
+  }
+
+  .open-tab-btn::after {
+    content: '⛶';
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .mobile-toggle {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  /* Hero CTA Buttons */
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+  }
+
   .stat-box {
-    padding: 0.85rem 0.5rem;
+    padding: 0.85rem 0.45rem;
+  }
+
+  .stat-number {
+    font-size: 1.55rem;
+  }
+
+  .stat-label {
+    font-size: 0.74rem;
   }
 
   .archives-grid {
@@ -2499,26 +2766,84 @@ body.in-iframe .navbar {
   }
 
   .back-to-top-btn {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    width: 42px;
-    height: 42px;
+    bottom: max(1.2rem, calc(env(safe-area-inset-bottom) + 0.5rem));
+    right: 1.2rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
   }
 }
 
-/* 5. Extra Narrow Phones (max-width: 360px) */
+/* -------------------------------------------------------------
+   Tier 7: Extra Narrow Phones (max-width: 360px)
+   ------------------------------------------------------------- */
 @media (max-width: 360px) {
   .hero-stats-row {
     grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
+    gap: 0.5rem;
   }
 
   .stat-number {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .school-badge-row {
-    font-size: 0.72rem;
-    padding: 0.3rem 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .brand-title {
+    font-size: 0.86rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   Tier 8: Mobile Landscape Mode (max-height: 520px)
+   ------------------------------------------------------------- */
+@media (max-height: 520px) and (orientation: landscape) {
+  .navbar .nav-content {
+    height: 56px;
+  }
+
+  .hero-section {
+    padding: 75px 0 35px;
+  }
+
+  .nav-links {
+    top: 56px;
+    height: calc(100vh - 56px);
+    padding: 1.5rem 1rem;
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+
+  .lightbox-content-box {
+    grid-template-columns: 1.2fr 1fr;
+    max-height: 94vh;
+  }
+
+  .lightbox-media-col {
+    max-height: 94vh;
+    min-height: 100%;
+  }
+
+  .lightbox-meta-col {
+    padding: 1.2rem;
+    overflow-y: auto;
+  }
+
+  .lightbox-arrow-btn {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  .lightbox-mobile-controls {
+    display: none;
   }
 }

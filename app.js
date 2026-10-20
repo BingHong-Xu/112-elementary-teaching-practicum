@@ -210,8 +210,18 @@ function initWaveCanvas() {
       ctx.shadowBlur = 0;
     });
 
-    requestAnimationFrame(animate);
+    // Pause when tab is hidden to save mobile battery
+    if (!document.hidden) {
+      requestAnimationFrame(animate);
+    }
   }
+  
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+      requestAnimationFrame(animate);
+    }
+  });
+
   animate();
 }
 
@@ -725,23 +735,40 @@ function setupEventListeners() {
   document.getElementById('prev-quote-btn')?.addEventListener('click', prevQuote);
   document.getElementById('next-quote-btn')?.addEventListener('click', nextQuote);
 
-  // Lightbox Close & Navigation
+  // Lightbox Close & Navigation (Desktop & Mobile Buttons)
   document.getElementById('lightbox-close')?.addEventListener('click', closeLightbox);
   document.getElementById('lightbox-prev')?.addEventListener('click', prevPhoto);
   document.getElementById('lightbox-next')?.addEventListener('click', nextPhoto);
+  document.getElementById('lightbox-mobile-prev')?.addEventListener('click', prevPhoto);
+  document.getElementById('lightbox-mobile-next')?.addEventListener('click', nextPhoto);
 
   document.getElementById('lightbox-modal')?.addEventListener('click', (e) => {
     if (e.target.id === 'lightbox-modal') closeLightbox();
   });
 
-  // Keyboard navigation for Lightbox
+  // Keyboard navigation for Lightbox & Mobile Menu
   window.addEventListener('keydown', (e) => {
     const modal = document.getElementById('lightbox-modal');
-    if (!modal.classList.contains('active')) return;
+    const navLinks = document.querySelector('.nav-links');
+    const mobileBtn = document.getElementById('mobile-toggle');
+    const backdrop = document.getElementById('nav-backdrop');
 
-    if (e.key === 'Escape') closeLightbox();
-    else if (e.key === 'ArrowLeft') prevPhoto();
-    else if (e.key === 'ArrowRight') nextPhoto();
+    if (e.key === 'Escape') {
+      if (modal && modal.classList.contains('active')) {
+        closeLightbox();
+      } else if (navLinks && navLinks.classList.contains('mobile-open')) {
+        navLinks.classList.remove('mobile-open');
+        backdrop?.classList.remove('active');
+        if (mobileBtn) {
+          mobileBtn.textContent = '☰';
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        }
+        document.body.style.overflow = '';
+      }
+    } else if (modal && modal.classList.contains('active')) {
+      if (e.key === 'ArrowLeft') prevPhoto();
+      else if (e.key === 'ArrowRight') nextPhoto();
+    }
   });
 
   // Auto rotate quotes every 8 seconds
@@ -753,23 +780,33 @@ function setupEventListeners() {
 function setupNavigation() {
   const mobileBtn = document.getElementById('mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
+  const backdrop = document.getElementById('nav-backdrop');
+
+  function closeMobileNav() {
+    if (navLinks) navLinks.classList.remove('mobile-open');
+    if (backdrop) backdrop.classList.remove('active');
+    if (mobileBtn) {
+      mobileBtn.textContent = '☰';
+      mobileBtn.setAttribute('aria-expanded', 'false');
+    }
+    document.body.style.overflow = '';
+  }
 
   if (mobileBtn && navLinks) {
     mobileBtn.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('mobile-open');
+      if (backdrop) backdrop.classList.toggle('active', isOpen);
       mobileBtn.textContent = isOpen ? '✕' : '☰';
       mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
+    // Close mobile menu when clicking the backdrop
+    backdrop?.addEventListener('click', closeMobileNav);
+
     // Close mobile menu when clicking any link
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('mobile-open');
-        mobileBtn.textContent = '☰';
-        mobileBtn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMobileNav);
     });
   }
 

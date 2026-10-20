@@ -18,6 +18,9 @@
   <!-- Background Animated Deep Ocean Wave Canvas -->
   <canvas id="wave-canvas"></canvas>
 
+  <!-- Mobile Navigation Backdrop Overlay -->
+  <div id="nav-backdrop" class="nav-backdrop"></div>
+
   <!-- Top Sticky Navbar -->
   <header class="navbar">
     <div class="container nav-content">
@@ -531,7 +534,14 @@
           <h3 id="lightbox-title" class="lightbox-caption-title">影像標題</h3>
           <p id="lightbox-desc" class="lightbox-caption-text">影像詳細敘述說明...</p>
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1.1rem;">
+        <!-- Mobile Touch Action Controls (Visible on Mobile/Tablet) -->
+        <div class="lightbox-mobile-controls">
+          <button id="lightbox-mobile-prev" class="lightbox-mobile-nav-btn" aria-label="上一張相片">‹ 上一張</button>
+          <span class="lightbox-touch-hint">👈 滑動換張 👉</span>
+          <button id="lightbox-mobile-next" class="lightbox-mobile-nav-btn" aria-label="下一張相片">下一張 ›</button>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1.1rem; margin-top: 0.8rem;">
           <span id="lightbox-counter" style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">1 / 33</span>
           <span style="font-size: 0.82rem; color: var(--gold-400); font-weight: 600;">🐋 52Hz Resonance</span>
         </div>
