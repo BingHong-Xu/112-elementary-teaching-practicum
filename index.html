@@ -1,687 +1,545 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="scroll-smooth">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>112學年度小教教學實習成果展 ｜ 高師大 × 四維國小「夢想共聲 ‧ 52赫茲」</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- PDF.js Vector Engine CDN (for Canvas Rendering & Page Flipping) -->
-  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
-
-  <!-- Encapsulated Data Modules (Immune to file:// CORS) -->
-  <script src="data/practicum-data.js"></script>
-  <script src="data/documents-text.js"></script>
-  <script src="data/teacher-media-map.js"></script>
-  <script src="data/files-index.js"></script>
+  <title>高師大 x 四維國小 小教教學實習『夢想共聲 ５２赫茲』成果展</title>
+  <meta name="description" content="國立高雄師範大學師資培育中心 x 高雄市四維國民小學 112學年度上學期小教教學實習『夢想共聲 ５２赫茲』集中實習數位成果展覽">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
 </head>
-<body class="min-h-screen flex flex-col pb-20 md:pb-8">
+<body>
 
-  <!-- Top App Navigation Bar -->
-  <header class="sticky top-0 z-40 glass-nav border-b border-sky-950 px-3 sm:px-6 py-2.5 shadow-md">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
-      
-      <!-- Brand & Identity -->
-      <div class="flex items-center space-x-2.5 sm:space-x-3 cursor-pointer group flex-shrink-0" onclick="switchTab('overview')">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-sky-600 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-cyan-900/30 group-hover:scale-105 transition-transform">
-          <span class="font-black text-sm sm:text-base">52</span>
+  <!-- Top Scroll Reading Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Background Animated Deep Ocean Wave Canvas -->
+  <canvas id="wave-canvas"></canvas>
+
+  <!-- Top Sticky Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-icon-wrap">🐋</div>
+        <div class="brand-text">
+          <span class="brand-title">高師大 × 四維國小</span>
+          <span class="brand-sub">夢想共聲 ５２赫茲 成果展</span>
         </div>
-        <div>
-          <div class="flex items-center space-x-1.5 sm:space-x-2">
-            <span class="font-black text-white text-xs sm:text-sm md:text-base tracking-tight">112上 小教實習成果展</span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-cyan-950 text-cyan-300 border border-cyan-700/60 hidden xs:inline-block">
-              四維國小 × 高師大
-            </span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#prologue" class="active">策展理念</a></li>
+          <li><a href="#leadership">雙校領航</a></li>
+          <li><a href="#timeline">實習航程</a></li>
+          <li><a href="#classes">班級群像</a></li>
+          <li><a href="#ceremony">休業盛典</a></li>
+          <li><a href="#archives">時光檔案</a></li>
+          <li><a href="#wisdom">教學智慧</a></li>
+          <li><a href="#voices">手札共鳴</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- 52Hz Web Audio Synthesizer Toggle -->
+        <button id="audio-toggle-btn" class="audio-btn" title="切換 52Hz 聲波共鳴音效">
+          <div class="soundwave-bars">
+            <span></span><span></span><span></span><span></span>
           </div>
-          <p class="text-[10px] sm:text-[11px] text-slate-400 hidden sm:block">「夢想共聲 ‧ 52赫茲」同頻共振的教育篇章</p>
-        </div>
-      </div>
-
-      <!-- Global Search -->
-      <div class="flex-1 max-w-sm mx-2 hidden md:block relative">
-        <div class="relative">
-          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-2.5 pointer-events-none"></i>
-          <input type="text" id="global-search" placeholder="搜尋老師、班級、試教單元、檔案..." 
-            class="w-full pl-9 pr-8 py-1.5 text-xs bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition">
-          <button onclick="clearGlobalSearch()" id="clear-search-btn" class="absolute right-2.5 top-2 text-slate-400 hover:text-white hidden">
-            <i data-lucide="x" class="w-3.5 h-3.5"></i>
-          </button>
-        </div>
-
-        <!-- Floating Search Dropdown -->
-        <div id="global-search-results" class="hidden absolute top-full left-0 right-0 mt-1 glass-panel rounded-xl p-2.5 shadow-2xl border border-cyan-500/30 z-50">
-          <div id="search-results-list" class="space-y-1.5 max-h-64 overflow-y-auto custom-scrollbar"></div>
-        </div>
-      </div>
-
-      <!-- Actions: Deep Sea Music -->
-      <div class="flex items-center space-x-2 flex-shrink-0">
-        <button id="btn-ambient-toggle" onclick="toggleDeepSeaAmbient()" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-semibold bg-teal-950 hover:bg-teal-900 text-teal-300 border border-teal-600/50 transition flex items-center space-x-1.5 shadow-sm" title="深海環境音樂 (點擊開啟/暫停)">
-          <span id="ambient-icon-wrapper" class="flex items-center space-x-0.5">
-            <i data-lucide="waves" class="w-3.5 h-3.5 text-teal-400"></i>
-          </span>
-          <span class="hidden sm:inline" id="ambient-btn-text">深海環境音樂：點擊啟動 🎵</span>
+          <span class="audio-text">聆聽 52Hz 夢想共鳴</span>
         </button>
-      </div>
-    </div>
 
-    <!-- Desktop Navigation Tabs -->
-    <div class="max-w-7xl mx-auto mt-2 touch-scroll pt-1 border-t border-slate-800/80 flex space-x-1 text-xs">
-      <button onclick="switchTab('overview')" data-tab="overview" class="tab-btn active px-3 py-1.5 rounded-lg whitespace-nowrap transition">🌟 實習總覽</button>
-      <button onclick="switchTab('timeline')" data-tab="timeline" class="tab-btn px-3 py-1.5 rounded-lg whitespace-nowrap text-slate-300 hover:bg-slate-800 transition">🗓️ 實習歷程</button>
-      <button onclick="switchTab('classes')" data-tab="classes" class="tab-btn px-3 py-1.5 rounded-lg whitespace-nowrap text-slate-300 hover:bg-slate-800 transition">🏫 班級與教師</button>
-      <button onclick="switchTab('trials')" data-tab="trials" class="tab-btn px-3 py-1.5 rounded-lg whitespace-nowrap text-slate-300 hover:bg-slate-800 transition">📐 試教寶典</button>
-      <button onclick="switchTab('whale52')" data-tab="whale52" class="tab-btn px-3 py-1.5 rounded-lg whitespace-nowrap text-slate-300 hover:bg-slate-800 transition">🐋 52赫茲特輯</button>
-      <button onclick="switchTab('gallery')" data-tab="gallery" class="tab-btn px-3 py-1.5 rounded-lg whitespace-nowrap text-slate-300 hover:bg-slate-800 transition">📸 光影藝廊</button>
-      <button onclick="switchTab('files')" data-tab="files" class="tab-btn px-3 py-1.5 rounded-lg whitespace-nowrap text-slate-300 hover:bg-slate-800 transition">📂 數位檔案</button>
+        <!-- Google Sites Iframe Support: Open in New Tab Fullscreen Button -->
+        <a id="open-in-tab-btn" href="https://binghong-xu.github.io/112-elementary-teaching-practicum/" target="_blank" rel="noopener noreferrer" class="open-tab-btn" title="在新分頁開啟全螢幕成果展">
+          <span>⛶ 全螢幕觀看</span>
+        </a>
+
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="切換導覽選單">☰</button>
+      </div>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <main class="flex-grow max-w-7xl w-full mx-auto px-3 sm:px-6 py-5 space-y-6">
-
-    <!-- ==================== TAB 1: 實習總覽 ==================== -->
-    <section id="tab-overview" class="tab-content space-y-6">
-      <!-- Hero Banner -->
-      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 border border-sky-800/40 p-6 sm:p-10 shadow-2xl">
-        <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="max-w-3xl space-y-3 relative z-10">
-          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-950/90 border border-cyan-500/40 text-cyan-300 text-xs font-semibold">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i>
-            <span>高雄市立四維國小 × 國立高雄師範大學師資培育中心</span>
+  <main>
+    <!-- Hero Header Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-ambient-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-text-col">
+          <div class="school-badge-row">
+            <span class="pulse-dot"></span>
+            <span>國立高雄師範大學 師培中心</span>
+            <span>×</span>
+            <span>高雄市立四維國民小學</span>
           </div>
-          <h2 class="text-xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight">
-            112學年度小教教學實習數位成果展<br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-sky-400">
-              「夢想共聲 ‧ 52赫茲」
-            </span>
-            同頻共振的教育篇章
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
-            在深邃的教育海洋中，每位實習教師最初都像一隻唱著 52 赫茲的鯨魚，在摸索中探尋屬於自己的教學音頻。歷經試教磨礪與三週入班深耕，這 52 赫茲的孤獨呼喚，最終在四維國小的校園裡激盪出同頻共振的燦爛回聲。
+
+          <h1 class="hero-title">
+            <span class="gradient-text-teal">夢想共聲</span><br>
+            <span class="gradient-text-gold">５２赫茲</span> 成果展
+          </h1>
+
+          <p class="hero-subtitle">
+            112學年度上學期 小教教學實習（三週集中實習）同頻共振的教育篇章
           </p>
-          <div class="pt-3 flex flex-wrap gap-3 text-xs">
-            <button onclick="toggle52HzAudio()" id="btn-ov-52hz" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 text-white font-bold flex items-center space-x-2 shadow-lg shadow-teal-900/30 transition">
-              <i data-lucide="volume-2" class="w-4 h-4"></i>
-              <span>聆聽 52Hz 藍鯨呼喚音</span>
-            </button>
-            <button onclick="switchTab('gallery')" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700 font-semibold flex items-center space-x-1.5 transition">
-              <i data-lucide="camera" class="w-4 h-4"></i>
-              <span>探索 900+ 光影相片</span>
-            </button>
-          </div>
-        </div>
-      </div>
 
-      <!-- Professors & Mentors Honors Section -->
-      <div class="space-y-3">
-        <h3 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
-          <i data-lucide="award" class="w-4 h-4 text-cyan-400"></i>
-          <span>師資培育中心 指導教授名銜</span>
-        </h3>
-        <div id="overview-supervisors" class="grid sm:grid-cols-2 gap-4"></div>
-      </div>
-
-      <!-- Key Stats Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-        <div class="glass-card rounded-2xl p-4 text-center space-y-1">
-          <div class="text-2xl sm:text-3xl font-black text-cyan-400">24</div>
-          <div class="text-xs text-slate-300 font-bold">位實習教師</div>
-          <div class="text-[10px] text-slate-400">覆蓋國語與數學試教</div>
-        </div>
-        <div class="glass-card rounded-2xl p-4 text-center space-y-1">
-          <div class="text-2xl sm:text-3xl font-black text-teal-400">12</div>
-          <div class="text-xs text-slate-300 font-bold">個實習班級</div>
-          <div class="text-[10px] text-slate-400">低、中、高年級全方位</div>
-        </div>
-        <div class="glass-card rounded-2xl p-4 text-center space-y-1">
-          <div class="text-2xl sm:text-3xl font-black text-pink-400">52</div>
-          <div class="text-xs text-slate-300 font-bold">份學童手繪感恩卡</div>
-          <div class="text-[10px] text-slate-400">406班真跡收錄於老師相簿</div>
-        </div>
-        <div class="glass-card rounded-2xl p-4 text-center space-y-1">
-          <div class="text-2xl sm:text-3xl font-black text-sky-400">900+</div>
-          <div class="text-xs text-slate-300 font-bold">張光影寫真紀錄</div>
-          <div class="text-[10px] text-slate-400">真跡影像秒開無障礙</div>
-        </div>
-      </div>
-
-      <!-- Bento Cards Section -->
-      <div class="grid sm:grid-cols-3 gap-4">
-        <div onclick="switchTab('whale52')" class="glass-card rounded-2xl p-5 cursor-pointer hover:border-cyan-400/50 space-y-2 group">
-          <div class="w-9 h-9 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center font-bold">🐋</div>
-          <h4 class="font-bold text-sm text-white group-hover:text-cyan-300 transition-colors">夢想共聲 ‧ 52赫茲休業式</h4>
-          <p class="text-xs text-slate-400 leading-relaxed">休業式大合影、特邀指導教授方金雅教授致詞與33張官方紀錄。</p>
-        </div>
-        <div onclick="switchTab('classes')" class="glass-card rounded-2xl p-5 cursor-pointer hover:border-cyan-400/50 space-y-2 group">
-          <div class="w-9 h-9 rounded-xl bg-indigo-950 text-indigo-400 flex items-center justify-center font-bold">🏫</div>
-          <h4 class="font-bold text-sm text-white group-hover:text-indigo-300 transition-colors">班級實習與教師名錄</h4>
-          <p class="text-xs text-slate-400 leading-relaxed">深入探索 12 班實習計畫、輔導導師與 24 位實習教師個人寫真與手札。</p>
-        </div>
-        <div onclick="switchTab('trials')" class="glass-card rounded-2xl p-5 cursor-pointer hover:border-cyan-400/50 space-y-2 group">
-          <div class="w-9 h-9 rounded-xl bg-amber-950 text-amber-400 flex items-center justify-center font-bold">📐</div>
-          <h4 class="font-bold text-sm text-white group-hover:text-amber-300 transition-colors">國語與數學試教寶典</h4>
-          <p class="text-xs text-slate-400 leading-relaxed">完整收錄試教教案、課堂公開演示、評委提問與指導講評重點。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== TAB 2: 實習歷程 ==================== -->
-    <section id="tab-timeline" class="tab-content hidden space-y-5">
-      <div class="glass-panel rounded-2xl p-4 sm:p-6 space-y-1">
-        <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-          <i data-lucide="calendar" class="w-4 h-4 text-cyan-400"></i>
-          <span>實習歷程與關鍵里程碑紀實</span>
-        </h2>
-        <p class="text-xs text-slate-400">從行前試教磨礪、三週入班深耕，到夢想共聲休業式的完整時序軌跡。</p>
-      </div>
-      <div id="timeline-container" class="max-w-3xl mx-auto pt-2"></div>
-    </section>
-
-    <!-- ==================== TAB 3: 班級與實習教師 ==================== -->
-    <section id="tab-classes" class="tab-content hidden space-y-6">
-      <!-- Grade Filters -->
-      <div class="glass-panel rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-        <div>
-          <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-            <i data-lucide="users" class="w-4 h-4 text-cyan-400"></i>
-            <span>實習班級與實習教師名錄</span>
-          </h2>
-          <p class="text-xs text-slate-400">點選年級過濾班級，或點擊教師名片瀏覽個人相簿、手札與心得</p>
-        </div>
-        <div class="flex items-center space-x-1.5 touch-scroll">
-          <button onclick="filterClassesGrade('all')" data-grade-btn="all" class="px-3 py-1 rounded-lg bg-sky-600 text-white font-bold text-xs">全部</button>
-          <button onclick="filterClassesGrade('低年級')" data-grade-btn="低年級" class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs">低年級</button>
-          <button onclick="filterClassesGrade('中年級')" data-grade-btn="中年級" class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs">中年級</button>
-          <button onclick="filterClassesGrade('高年級')" data-grade-btn="高年級" class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs">高年級</button>
-        </div>
-      </div>
-
-      <!-- Classes Grid -->
-      <div class="space-y-3">
-        <h3 class="text-xs font-bold text-cyan-300 tracking-wider uppercase">🏫 實習班級全覽</h3>
-        <div id="classes-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-      </div>
-
-      <!-- Teachers Grid -->
-      <div class="space-y-3 pt-2">
-        <h3 class="text-xs font-bold text-cyan-300 tracking-wider uppercase">👩‍🏫 24 位實習教師個人名錄（點擊開啟專屬檔案）</h3>
-        <div id="teachers-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4"></div>
-      </div>
-    </section>
-
-    <!-- ==================== TAB 4: 試教寶典 ==================== -->
-    <section id="tab-trials" class="tab-content hidden space-y-6">
-      <div class="glass-panel rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-        <div>
-          <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
-            <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i>
-            <span>國語與數學課堂公開試教寶典</span>
-          </h2>
-          <p class="text-xs text-slate-400">特邀指導教授方金雅教授現場精闢講評與24位實習教師教學設計</p>
-        </div>
-        <div class="flex items-center space-x-2">
-          <button onclick="switchTrialCategory('math')" id="btn-trial-math" class="px-3 py-1.5 rounded-lg bg-amber-600 text-white font-bold text-xs">
-            📐 數學試教 (12場)
-          </button>
-          <button onclick="switchTrialCategory('mandarin')" id="btn-trial-mandarin" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs">
-            📖 國語試教 (12場)
-          </button>
-        </div>
-      </div>
-
-      <!-- Trials Grid Containers -->
-      <div id="trials-math-container" class="grid sm:grid-cols-2 gap-4"></div>
-      <div id="trials-mandarin-container" class="grid sm:grid-cols-2 gap-4 hidden"></div>
-    </section>
-
-    <!-- ==================== TAB 5: 52赫茲特輯 ==================== -->
-    <section id="tab-whale52" class="tab-content hidden space-y-6">
-      <div class="glass-panel rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-teal-500/30 bg-gradient-to-br from-slate-900 via-teal-950/40 to-slate-900">
-        <div class="max-w-2xl space-y-3 relative z-10">
-          <div class="inline-flex items-center space-x-1.5 px-3 py-0.5 rounded-full bg-teal-950 text-teal-300 text-xs font-bold border border-teal-500/40">
-            <span>🐋 「夢想共聲 ‧ 52赫茲」同頻共振的教育篇章</span>
-          </div>
-          <h2 class="text-xl sm:text-2xl font-black text-white">五二赫茲藍鯨的教育隱喻</h2>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            世界著名的 52 赫茲鯨魚，因為發出與其他鯨魚不同的頻率，曾在浩瀚的大海中獨自漫遊。教育現場的每位新進教師，也曾擔憂自己的理想是否無人理解。然而在四維國小三週的攜手共進中，這 52 赫茲的頻率找到了知音，與學童純真的心靈、輔導導師的熱誠，激盪出同頻共振的壯麗樂章！
+          <p class="hero-description">
+            在浩瀚的教育汪洋中，每位初出茅廬的師資生，正如那隻歌唱於 52 赫茲頻率的深海藍鯨。
+            走入四維國小這座溫暖島嶼，24 位實習教師、12 位輔導導師與數百位純真孩子相遇。
+            在三週的晨昏陪伴與公開試教中，我們聽見了彼此的頻率，唱響了同頻共振的教育夢想之歌。
           </p>
-          <div class="pt-2">
-            <button onclick="toggle52HzAudio()" id="btn-special-52hz" class="px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold flex items-center space-x-2 shadow-lg shadow-teal-950/50 transition text-xs">
-              <i data-lucide="volume-2" class="w-4 h-4"></i>
-              <span>聆聽 52Hz 藍鯨呼喚音</span>
-            </button>
-          </div>
-        </div>
-      </div>
 
-      <!-- Facebook Official Post & Highlight -->
-      <div id="fb-post-showcase"></div>
-
-      <!-- Closing Ceremony Photos Grid -->
-      <div class="space-y-3">
-        <h3 class="text-xs font-bold text-cyan-300 tracking-wider uppercase">📸 休業式官方典藏光影紀實（全50幅全景實錄）</h3>
-        <div id="ceremony-photos-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4"></div>
-      </div>
-    </section>
-
-    <!-- ==================== TAB 6: 光影藝廊 ==================== -->
-    <section id="tab-gallery" class="tab-content hidden space-y-6">
-      <div class="glass-panel rounded-3xl p-4 sm:p-6 space-y-4 border border-sky-800/40">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-          <div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/40 text-xs font-bold mb-1">
-              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i>
-              <span>珍貴真實光影真跡 ‧ 1280px 超高畫質</span>
+          <!-- Key Statistics Grid -->
+          <div class="hero-stats-row">
+            <div class="stat-box">
+              <span class="stat-number">24</span>
+              <span class="stat-label">位實習教師</span>
             </div>
-            <h2 class="text-lg sm:text-2xl font-black text-white flex items-center gap-2">
-              <i data-lucide="camera" class="w-5 h-5 text-cyan-400"></i>
-              <span>光影回憶藝廊</span>
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-400 mt-0.5">
-              依主題相簿與<strong>相片尺寸版型（橫幅寬屏 ‧ 直幅立面）</strong>智慧分區呈現，徹底杜絕版面混雜與邊緣裁切
+            <div class="stat-box">
+              <span class="stat-number">12</span>
+              <span class="stat-label">個合作班級</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">3</span>
+              <span class="stat-label">週沉浸實習</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">158</span>
+              <span class="stat-label">張影像珍藏</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#ceremony" class="btn-primary">
+              <span>🏛️ 參觀休業盛典攝影展</span>
+            </a>
+            <a href="#classes" class="btn-secondary">
+              <span>👥 探索 12 班實習群像</span>
+            </a>
+          </div>
+
+          <!-- Fast Jump Anchor Bar -->
+          <div class="quick-jump-bar">
+            <span class="quick-jump-label">展區導引</span>
+            <a href="#prologue" class="quick-jump-pill">🌊 策展序曲</a>
+            <a href="#leadership" class="quick-jump-pill">🏛️ 雙校領航</a>
+            <a href="#timeline" class="quick-jump-pill">⏳ 實習航程</a>
+            <a href="#classes" class="quick-jump-pill">👥 班級群像</a>
+            <a href="#ceremony" class="quick-jump-pill">📸 休業盛典</a>
+            <a href="#archives" class="quick-jump-pill">🎞️ 時光檔案</a>
+            <a href="#wisdom" class="quick-jump-pill">💡 教學智慧</a>
+            <a href="#voices" class="quick-jump-pill">💬 手札共鳴</a>
+          </div>
+        </div>
+
+        <!-- Hero Featured Visual (52Hz Whale Illustration Card) -->
+        <div class="hero-visual-col" id="hero-whale-container">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Compliance Notification Banner -->
+    <section class="privacy-banner">
+      <div class="container privacy-content">
+        <div class="privacy-left">
+          <span class="privacy-shield-icon">🛡️</span>
+          <span><strong>個資安全與隱私防護聲明：</strong>本展覽網站已全面遵循個人資料保護原則，完整去除全體師長與實習教師之個人手機號碼、電話分機、電子郵件(Email)及學號等私人資訊，僅保留教育專業、所屬系所、實習班級與教學演示單元記載。</span>
+        </div>
+        <span class="privacy-pill-badge">Privacy Compliant ✓</span>
+      </div>
+    </section>
+
+    <!-- Section 1: Concept & Narrative Steps -->
+    <section id="prologue" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Prologue & Philosophy</span>
+          <h2 class="section-title">策展理念：何謂「５２赫茲」的教育共振？</h2>
+          <p class="section-desc">
+            在浩瀚的海洋裡，一隻發出 52 赫茲頻率的藍鯨，曾被認為是孤獨的象徵。然而，當志同道合的教育者齊聚，獨特的頻率終將激盪出最美麗的和聲。
+          </p>
+        </div>
+
+        <div class="concept-steps-row">
+          <div class="concept-card">
+            <span class="concept-card-badge">第一階段 ｜ 初心探索</span>
+            <div class="concept-icon-wrap">🌊</div>
+            <h3>孤獨的探索．獨立的頻率</h3>
+            <p>
+              走進真實教室前，每位師資生懷抱著理想與教育初心，孤獨地面對課本教案、試教試煉與無數個自我詰問的夜晚。我們如同深海中的 52 赫茲，渴望找到能被聽見的教育迴音。
             </p>
           </div>
-          <span id="gallery-count-badge" class="text-xs px-3 py-1.5 rounded-xl bg-slate-800 text-cyan-300 border border-slate-700 font-bold">
-            載入中...
-          </span>
-        </div>
 
-        <!-- Album Chips -->
-        <div class="space-y-2 pt-2 border-t border-slate-800/80">
-          <div class="flex items-center justify-between text-xs text-slate-400">
-            <span class="font-bold text-slate-300 flex items-center gap-1">
-              <i data-lucide="folder" class="w-3.5 h-3.5 text-cyan-400"></i>
-              <span>主題相簿分類：</span>
-            </span>
-          </div>
-          <div id="album-select-chips" class="flex items-center space-x-1.5 touch-scroll pb-1"></div>
-        </div>
-
-        <!-- Photo Dimensions / Orientation Filter Bar -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-3 border-t border-slate-800/80">
-          <div class="flex items-center space-x-1.5 touch-scroll" id="gallery-dimension-chips">
-            <span class="text-xs text-slate-400 mr-1 font-bold flex items-center gap-1 flex-shrink-0">
-              <i data-lucide="maximize" class="w-3.5 h-3.5 text-sky-400"></i>
-              <span>照片尺寸版型：</span>
-            </span>
-            <button onclick="filterGalleryOrientation('all')" id="btn-orient-all" class="px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-sky-600 text-white shadow-sm flex items-center gap-1">
-              <span>🌟 全部尺寸</span>
-            </button>
-            <button onclick="filterGalleryOrientation('landscape')" id="btn-orient-landscape" class="px-3 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap transition bg-slate-800 text-slate-300 hover:bg-slate-700 flex items-center gap-1">
-              <span>🖼️ 橫幅寬屏 (1280×960)</span>
-            </button>
-            <button onclick="filterGalleryOrientation('portrait')" id="btn-orient-portrait" class="px-3 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap transition bg-slate-800 text-slate-300 hover:bg-slate-700 flex items-center gap-1">
-              <span>📱 直幅立面/手繪卡 (960×1280)</span>
-            </button>
-          </div>
-
-          <!-- Grouping Mode Switcher -->
-          <div class="flex items-center bg-slate-900 border border-slate-700 rounded-xl p-0.5 flex-shrink-0">
-            <button onclick="toggleGalleryGroupMode(true)" id="btn-gallery-group-on" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-600 text-white transition flex items-center gap-1" title="依照片尺寸分區排版">
-              <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
-              <span>尺寸分區呈現</span>
-            </button>
-            <button onclick="toggleGalleryGroupMode(false)" id="btn-gallery-group-off" class="px-2.5 py-1 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition flex items-center gap-1" title="連續網格">
-              <i data-lucide="grid" class="w-3.5 h-3.5"></i>
-              <span>連續網格</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Photos Container -->
-      <div id="gallery-photos-container" class="space-y-6"></div>
-    </section>
-
-    <!-- ==================== TAB 7: 數位檔案檢索 ==================== -->
-    <section id="tab-files" class="tab-content hidden space-y-6">
-      <!-- Header Banner & Category Metrics Dashboard -->
-      <div class="glass-panel rounded-3xl p-4 sm:p-6 space-y-4 border border-sky-800/40">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-xs font-bold mb-1.5">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cyan-400"></i>
-              <span>高師大 × 四維國小 數位典藏檔案庫</span>
-            </div>
-            <h2 class="text-lg sm:text-2xl font-black text-white flex items-center gap-2">
-              <i data-lucide="folder-open" class="w-5 h-5 text-cyan-400"></i>
-              <span>數位典藏公文與文獻檔案中心</span>
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-400 mt-1">
-              全站 1,300+ 份實習計畫書、試教教案、手札週誌、心得報告與相片檔案，依<strong>文獻類型與相片尺寸</strong>精準分區呈現，杜絕版面混雜
+          <div class="concept-card">
+            <span class="concept-card-badge">第二階段 ｜ 遇見知音</span>
+            <div class="concept-icon-wrap">🏝️</div>
+            <h3>四維島嶼．相遇同頻共振</h3>
+            <p>
+              踏入四維國小這座充滿溫度的教育綠洲，在王校長、指導教授與輔導導師的悉心引領下，我們看見了孩子的笑臉與專注目光。孤單的 52 赫茲不再形單影隻，而是與教室中的心跳同步共鳴。
             </p>
           </div>
-          <div class="flex items-center gap-2 flex-shrink-0">
-            <span id="files-total-badge" class="px-3 py-1.5 rounded-xl bg-slate-800 text-cyan-300 border border-slate-700 font-bold text-xs">
-              總典藏 1,302 份檔案
-            </span>
-          </div>
-        </div>
 
-        <!-- 9 Category Summary Dashboard Cards -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-9 gap-2 pt-2 border-t border-slate-800/80" id="file-category-cards"></div>
-
-        <!-- Filter Controls & Real-time Search -->
-        <div class="flex flex-col space-y-3 pt-3 border-t border-slate-800/80">
-          <!-- Specification / Dimension Filter Sub-bar -->
-          <div class="flex items-center justify-between flex-wrap gap-2 text-xs">
-            <div class="flex items-center space-x-1.5 touch-scroll">
-              <span class="text-slate-400 mr-1 font-bold flex items-center gap-1 flex-shrink-0">
-                <i data-lucide="sliders" class="w-3.5 h-3.5 text-sky-400"></i>
-                <span>尺寸規格篩選：</span>
-              </span>
-              <button onclick="filterFilesDimension('all')" id="btn-dim-all" class="px-2.5 py-1 rounded-lg text-xs font-bold whitespace-nowrap transition bg-sky-600 text-white shadow-sm">
-                全部規格
-              </button>
-              <button onclick="filterFilesDimension('document')" id="btn-dim-doc" class="px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-slate-800 text-slate-300 hover:bg-slate-700">
-                📄 A4 公文規格
-              </button>
-              <button onclick="filterFilesDimension('landscape')" id="btn-dim-land" class="px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-slate-800 text-slate-300 hover:bg-slate-700">
-                🖼️ 橫向寬幅 (1280×960)
-              </button>
-              <button onclick="filterFilesDimension('portrait')" id="btn-dim-port" class="px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-slate-800 text-slate-300 hover:bg-slate-700">
-                📱 直向立幅 (960×1280)
-              </button>
-              <button onclick="filterFilesDimension('video')" id="btn-dim-vid" class="px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-slate-800 text-slate-300 hover:bg-slate-700">
-                🎬 720p 影音
-              </button>
-            </div>
-          </div>
-
-          <!-- Category Filter Pills & Actions -->
-          <div class="flex flex-col md:flex-row gap-3 justify-between items-stretch md:items-center">
-            <!-- Category Filter Pills -->
-            <div class="flex items-center space-x-1.5 touch-scroll pb-1 md:pb-0" id="file-category-pills"></div>
-
-            <div class="flex items-center gap-2 flex-shrink-0">
-              <!-- Search Input -->
-              <div class="relative w-full sm:w-60 md:w-64">
-                <input type="text" id="file-search-input" oninput="renderFilesArchive()" placeholder="搜尋檔案、教師、年級、尺寸..." 
-                  class="w-full pl-8 pr-3 py-1.5 text-xs bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400">
-                <i data-lucide="search" class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5"></i>
-              </div>
-
-              <!-- View Mode Switcher -->
-              <div class="flex items-center bg-slate-900 border border-slate-700 rounded-xl p-0.5">
-                <button onclick="switchFileViewMode('card')" id="btn-view-card" class="px-2.5 py-1 rounded-lg text-xs font-medium bg-sky-600 text-white transition flex items-center gap-1" title="分區卡片檢視">
-                  <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
-                  <span class="hidden sm:inline">卡片</span>
-                </button>
-                <button onclick="switchFileViewMode('table')" id="btn-view-table" class="px-2.5 py-1 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition flex items-center gap-1" title="清單表格檢視">
-                  <i data-lucide="list" class="w-3.5 h-3.5"></i>
-                  <span class="hidden sm:inline">表格</span>
-                </button>
-              </div>
-            </div>
+          <div class="concept-card">
+            <span class="concept-card-badge">第三階段 ｜ 璀璨交響</span>
+            <div class="concept-icon-wrap">🐋</div>
+            <h3>夢想共聲．揚帆啟航新程</h3>
+            <p>
+              三週的實地磨礪、公開演示與深度議課，讓我們褪去生澀、淬鍊堅韌。休業式上的大合照與愛心展板，象徵我們攜手築起的教育諾言——無論未來身處何方，我們都將帶著這份共振，點亮孩子的生命。
+            </p>
           </div>
         </div>
       </div>
-
-      <!-- Files Content Container (Categorized Sections or Filtered View) -->
-      <div id="files-archive-container" class="space-y-6"></div>
     </section>
 
+    <!-- Section 2: Leadership & 8 Divisions Bento Grid -->
+    <section id="leadership" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Leadership & Collaboration</span>
+          <h2 class="section-title">雙校攜手．名師領航陣容</h2>
+          <p class="section-desc">
+            高師大師資培育中心與四維國小傾力合作，雙校校長與教授傾囊相授，實習幹部齊心籌組八大工作組別，打造專業嚴謹的實習殿堂。
+          </p>
+        </div>
+
+        <!-- 4 Distinguished Leaders -->
+        <div class="leaders-grid" id="leaders-grid">
+          <!-- Rendered via JavaScript -->
+        </div>
+
+        <!-- 8 Working Divisions Bento Grid -->
+        <div class="bento-container">
+          <div class="bento-header">
+            <h3>🏛️ 實習籌備小組．八大組別職責分工架構</h3>
+            <p>24 位實習生分工合作，共同完成休業式、手冊編纂、會場技術、文宣影音等全方位行政籌備</p>
+          </div>
+          <div class="divisions-bento-grid" id="divisions-grid">
+            <!-- Rendered via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Voyage Timeline -->
+    <section id="timeline" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Voyage Timeline</span>
+          <h2 class="section-title">實習航程紀實：從校內試煉到三週綻放</h2>
+          <p class="section-desc">
+            記錄從 10 月高師大校內試教、11 月初探四維校園，到三週沉浸入班與公開演示的完整教育軌跡。
+          </p>
+        </div>
+
+        <div class="timeline-track" id="timeline-track">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: 12 Classes & 24 Teachers Showcase -->
+    <section id="classes" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Classes & Educators</span>
+          <h2 class="section-title">實習班級與教師群像（12 班．24 位準教師）</h2>
+          <p class="section-desc">
+            橫跨低、中、高三個年段，每位實習教師在輔導導師帶領下，深耕班級常規、公開試教演示，展現各自卓越的學科專長與教育熱忱。
+          </p>
+        </div>
+
+        <!-- Filter Bar & Search -->
+        <div class="classes-filter-bar">
+          <div class="grade-tabs-wrap">
+            <button class="tab-btn active" data-grade="all">全部班級 (12)</button>
+            <button class="tab-btn" data-grade="低年級">低年級組 (3班)</button>
+            <button class="tab-btn" data-grade="中年級">中年級組 (4班)</button>
+            <button class="tab-btn" data-grade="高年級">高年級組 (5班)</button>
+          </div>
+
+          <div class="search-box-wrap">
+            <span class="search-icon-pos">🔍</span>
+            <input type="text" id="teacher-search" class="search-input" placeholder="搜尋實習老師姓名、學系、單元或班級..." />
+          </div>
+        </div>
+
+        <!-- Classes Grid -->
+        <div class="classes-grid" id="classes-grid">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Official Ceremony 33-Photo Grand Digital Gallery -->
+    <section id="ceremony" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Closing Ceremony Gallery</span>
+          <h2 class="section-title">休業式盛典：『夢想共聲 ５２赫茲』官方數位攝影展</h2>
+          <p class="section-desc">
+            完整展出休業式 33 張官方精選高清紀實照片，分類收錄大合照、師長風采、愛心展板呈獻、心得發表與幕後籌備細節。
+          </p>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="ceremony-filter-pills">
+          <button class="cat-pill active" data-cat="all">全部典禮影像 <span class="cat-count">33</span></button>
+          <button class="cat-pill" data-cat="合照紀念">比心與比讚大合照 <span class="cat-count">2</span></button>
+          <button class="cat-pill" data-cat="師長風采">校長與教授勉勵 <span class="cat-count">9</span></button>
+          <button class="cat-pill" data-cat="雙校領航">雙校攜手與感謝狀 <span class="cat-count">3</span></button>
+          <button class="cat-pill" data-cat="感恩呈獻">手寫愛心感恩展板 <span class="cat-count">2</span></button>
+          <button class="cat-pill" data-cat="心得發表">實習生真情告白 <span class="cat-count">2</span></button>
+          <button class="cat-pill" data-cat="典禮盛況">會場全景與主持風采 <span class="cat-count">5</span></button>
+          <button class="cat-pill" data-cat="幕後籌備">會場佈置與技術控台 <span class="cat-count">6</span></button>
+          <button class="cat-pill" data-cat="主視覺象徵">52Hz藍鯨主視覺卡 <span class="cat-count">5</span></button>
+        </div>
+
+        <!-- Photo Grid -->
+        <div class="ceremony-grid" id="photo-grid">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Curated Photographic Archives -->
+    <section id="archives" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Photographic Archives</span>
+          <h2 class="section-title">多元實習時光檔案庫（120+ 張精彩剪影）</h2>
+          <p class="section-desc">
+            除了休業式盛典，三週實習中更收錄了始業式啟航、入班對話、課堂試教與孩子們親手繪製的暖心卡片。
+          </p>
+        </div>
+
+        <!-- Extra Tabs Navigation -->
+        <div class="archives-tabs-nav">
+          <button class="archive-tab-btn active" data-tab="startCeremony">
+            <span>始業式啟航</span>
+            <span class="archive-count-badge">36</span>
+          </button>
+          <button class="archive-tab-btn" data-tab="dialogueMeet">
+            <span>入班對話見習</span>
+            <span class="archive-count-badge">15</span>
+          </button>
+          <button class="archive-tab-btn" data-tab="teachingLive">
+            <span>課堂試教與觀議課</span>
+            <span class="archive-count-badge">50</span>
+          </button>
+          <button class="archive-tab-btn" data-tab="studentCards">
+            <span>406學童手繪暖心卡</span>
+            <span class="archive-count-badge">24</span>
+          </button>
+        </div>
+
+        <div class="archives-grid" id="extra-grid">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Teaching Wisdom & Trial Reflection -->
+    <section id="wisdom" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Pedagogical Wisdom</span>
+          <h2 class="section-title">課堂試煉與教學智慧淬鍊</h2>
+          <p class="section-desc">
+            從校內國語與數學試教時教授的犀利講評，到入班三週的現場實踐，記錄師資生如何將教育理論轉化為課堂真功夫。
+          </p>
+        </div>
+
+        <div class="wisdom-grid-layout">
+          <!-- Math Teaching Insights Card -->
+          <div class="wisdom-feature-card math-card">
+            <div class="wisdom-card-top-row">
+              <div class="wisdom-icon-box math-icon-box">📐</div>
+              <div>
+                <h3>數學試教淬鍊：製造需求，而非直給錦囊</h3>
+                <span style="font-size: 0.8rem; color: var(--gold-400);">評委講評重點 ＆ 課堂實踐反思</span>
+              </div>
+            </div>
+            <ul class="wisdom-items-stack">
+              <li class="wisdom-single-item">
+                <span class="wisdom-index-badge math-badge">1</span>
+                <div>
+                  <strong>布題要製造認知衝突與需求：</strong>
+                  教授提醒：「不要在布題之後馬上給出錦囊妙計，學生會失去思考的機會。」例如教學面積或時鐘，必須製造間接比較的必要性，引導孩子自主探索。
+                </div>
+              </li>
+              <li class="wisdom-single-item">
+                <span class="wisdom-index-badge math-badge">2</span>
+                <div>
+                  <strong>教學語言精確化與生活化：</strong>
+                  乘法教學時「是5加了幾次？還是有幾個5？」必須釐清是加法次數還是數字單位，避免預設學生已經先修，使用更童趣貼切的引導語言。
+                </div>
+              </li>
+              <li class="wisdom-single-item">
+                <span class="wisdom-index-badge math-badge">3</span>
+                <div>
+                  <strong>公因數與公倍數的架構鋪陳：</strong>
+                  在學生尚未掌握公因數概念前，不宜急躁布設「最大公因數」題目；充分給予小組操作道具（如童軍繩）的時間，促進實踐操作。
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Chinese Teaching Insights Card -->
+          <div class="wisdom-feature-card chinese-card">
+            <div class="wisdom-card-top-row">
+              <div class="wisdom-icon-box chinese-icon-box">📚</div>
+              <div>
+                <h3>國語試教淬鍊：促進互動，深究文本意涵</h3>
+                <span style="font-size: 0.8rem; color: var(--teal-300);">評委講評重點 ＆ 課堂實踐反思</span>
+              </div>
+            </div>
+            <ul class="wisdom-items-stack">
+              <li class="wisdom-single-item">
+                <span class="wisdom-index-badge chinese-badge">1</span>
+                <div>
+                  <strong>告別一問一答，促成「一問多答」：</strong>
+                  試教後最深刻的體會是：「不要老師一問學生一答，要把問題拋給其他組別，讓學生彼此互動與辯論，統整結論也由學生歸納。」
+                </div>
+              </li>
+              <li class="wisdom-single-item">
+                <span class="wisdom-index-badge chinese-badge">2</span>
+                <div>
+                  <strong>文本深究不只是表面美味：</strong>
+                  在《嘗嘗我的家鄉味》或《美食島》教學中，教授點出「課文不只是描述菜餚味道，更要引導孩子看見文化認同、情感記憶與土地情懷」。
+                </div>
+              </li>
+              <li class="wisdom-single-item">
+                <span class="wisdom-index-badge chinese-badge">3</span>
+                <div>
+                  <strong>把麥克風交給孩子：</strong>
+                  讓發言的同學拿著麥克風直接面向全班說明，教師避免在中間過度轉述，保留孩子最真實純粹的原創語氣，建立發言自主權。
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Featured Lesson Units Strip -->
+        <div class="lesson-plans-showcase">
+          <div class="lesson-plans-title">
+            <span>📖 實習教師公開授課．精選教學單元教案庫</span>
+          </div>
+          <div class="lesson-units-pills-row">
+            <div class="unit-chip">⏰ 康軒二上《幾時幾分》（低年級時間空間具象操作）</div>
+            <div class="unit-chip">🍡 國語繪本延伸《幸福湯圓》（低年級情境感受與學習單）</div>
+            <div class="unit-chip">🍜 國語第11課《美食島》（中年級飲食文化與戲劇引導）</div>
+            <div class="unit-chip">🍕 數學第8單元《分數》（中年級生活實物與等值分數）</div>
+            <div class="unit-chip">🪸 國語第9課《海中的熱帶雨林》（中年級表藝肢體海洋想像）</div>
+            <div class="unit-chip">🔢 數學《認識二位小數》（中年級位值轉換與金錢情境）</div>
+            <div class="unit-chip">🌳 數學六上《規律問題 / 間隔問題》（高年級幾何圖形規律建模）</div>
+            <div class="unit-chip">🧭 國語第14課《明智的抉擇》（高年級思辨與人生價值探討）</div>
+            <div class="unit-chip">⚖️ 數學第11冊《比例與生活應用》（高年級數學邏輯生活實踐）</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Quotes Carousel & Deep Reflections -->
+    <section id="voices" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Voices of Resonance</span>
+          <h2 class="section-title">手札共鳴：實習教師的心靈告白</h2>
+          <p class="section-desc">
+            節錄 24 位高師大實習教師在三週實習手札中的真摯金句與教育誓言。
+          </p>
+        </div>
+
+        <div class="quotes-carousel-wrapper">
+          <div class="quote-card-display" id="quote-slide-content">
+            <!-- Rendered via JavaScript -->
+          </div>
+
+          <div class="quote-controls-row">
+            <button id="prev-quote-btn" class="quote-nav-button" aria-label="上一則金句">←</button>
+            <div class="quote-dots-indicator" id="quote-dots">
+              <!-- Rendered via JavaScript -->
+            </div>
+            <button id="next-quote-btn" class="quote-nav-button" aria-label="下一則金句">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Mobile Bottom Navigation Bar (Screens < 768px) -->
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 glass-nav border-t border-slate-800/80 px-2 py-1.5 flex justify-around items-center text-center text-[10px]">
-    <button onclick="switchTab('overview')" data-mob-tab="overview" class="flex flex-col items-center text-cyan-400 p-1">
-      <i data-lucide="home" class="w-4 h-4"></i>
-      <span>總覽</span>
-    </button>
-    <button onclick="switchTab('classes')" data-mob-tab="classes" class="flex flex-col items-center text-slate-400 p-1">
-      <i data-lucide="users" class="w-4 h-4"></i>
-      <span>師資班級</span>
-    </button>
-    <button onclick="switchTab('trials')" data-mob-tab="trials" class="flex flex-col items-center text-slate-400 p-1">
-      <i data-lucide="award" class="w-4 h-4"></i>
-      <span>試教寶典</span>
-    </button>
-    <button onclick="switchTab('whale52')" data-mob-tab="whale52" class="flex flex-col items-center text-slate-400 p-1">
-      <i data-lucide="volume-2" class="w-4 h-4"></i>
-      <span>52Hz</span>
-    </button>
-    <button onclick="switchTab('gallery')" data-mob-tab="gallery" class="flex flex-col items-center text-slate-400 p-1">
-      <i data-lucide="camera" class="w-4 h-4"></i>
-      <span>光影相片</span>
-    </button>
-    <button onclick="switchTab('files')" data-mob-tab="files" class="flex flex-col items-center text-slate-400 p-1">
-      <i data-lucide="folder" class="w-4 h-4"></i>
-      <span>檔案</span>
-    </button>
-  </nav>
-
-  <!-- ==================== MODALS ==================== -->
-
-  <!-- 1. Teacher Personal Modal -->
-  <div id="teacher-modal" class="app-modal hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4">
-    <div class="glass-panel w-full max-w-3xl max-h-[90vh] rounded-3xl overflow-hidden flex flex-col shadow-2xl border border-sky-500/30 animate-in fade-in zoom-in-95 duration-200">
-      <!-- Modal Header -->
-      <div class="p-4 sm:p-5 border-b border-slate-800 flex items-center justify-between bg-slate-900/60">
-        <div class="flex items-center space-x-3">
-          <div id="tm-avatar" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-cyan-600 to-blue-700 flex items-center justify-center text-white font-bold text-lg shadow-md">
-            師
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <h3 id="tm-name" class="text-base sm:text-lg font-bold text-white">實習教師</h3>
-              <span id="tm-class" class="text-xs px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-700/50">班級</span>
-            </div>
-            <div class="flex items-center gap-2 text-xs text-slate-400 mt-0.5">
-              <span id="tm-dept">系所</span>
-              <span>•</span>
-              <span id="tm-subject" class="text-teal-300">科別</span>
-            </div>
-          </div>
-        </div>
-        <button onclick="closeModals()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition">
-          <i data-lucide="x" class="w-4 h-4"></i>
-        </button>
-      </div>
-
-      <!-- Modal Body (Scrollable) -->
-      <div class="p-4 sm:p-6 overflow-y-auto custom-scrollbar space-y-5 text-xs">
-        
-        <!-- Trial Lesson Info -->
-        <div class="p-3.5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-1">
-          <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">公開演示單元</div>
-          <div id="tm-trial" class="text-sm font-semibold text-white">單元名稱</div>
+  <!-- Footer -->
+  <footer class="footer-wrap">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-info-col">
+          <h4>夢想共聲 ５２赫茲 成果展</h4>
+          <p>
+            國立高雄師範大學 師資培育中心 × 高雄市立四維國民小學<br>
+            112學年度上學期 國民小學教育教學實習（三週集中實習）
+          </p>
+          <p style="margin-top: 0.9rem; font-size: 0.85rem; color: var(--gold-300);">
+            「在教育的深海裡，我們聽見了彼此的歌聲，同頻共振，永不孤單。」
+          </p>
         </div>
 
-        <!-- 406 Class Thank You Cards Special Section (李沛錞 & 鄭凱瀚 專屬) -->
-        <div id="tm-406-card-section" class="hidden space-y-2 p-4 rounded-2xl bg-pink-950/20 border border-pink-500/30">
-          <div class="flex items-center justify-between">
-            <span class="font-bold text-pink-300 flex items-center gap-1.5">
-              <span>💌 四年六班學童專屬手繪感恩卡</span>
-              <span class="text-[10px] px-2 py-0.5 rounded-full bg-pink-900/70 text-pink-200">全套 52 份</span>
-            </span>
-            <span class="text-[10px] text-pink-400">點擊卡片放大檢視</span>
-          </div>
-          <div id="tm-406-cards-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2"></div>
+        <div class="footer-nav-col">
+          <h5>展覽導覽</h5>
+          <ul>
+            <li><a href="#prologue">策展理念</a></li>
+            <li><a href="#leadership">雙校名師陣容</a></li>
+            <li><a href="#timeline">三週實習航程</a></li>
+            <li><a href="#classes">12 班實習群像</a></li>
+          </ul>
         </div>
 
-        <!-- Photos Section -->
-        <div class="space-y-2">
-          <div class="font-bold text-white flex items-center justify-between">
-            <span>📸 個人實習相片寫真</span>
-            <span class="text-[10px] text-slate-400">點選開燈箱</span>
-          </div>
-          <div id="tm-photos-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
-        </div>
-
-        <!-- Documents Section (KWLQ Journals, Report) -->
-        <div class="space-y-2">
-          <div class="font-bold text-white">✍️ 實習手札週誌與期末心得報告</div>
-          <div id="tm-documents-list" class="grid sm:grid-cols-2 gap-2"></div>
+        <div class="footer-nav-col">
+          <h5>珍藏展品</h5>
+          <ul>
+            <li><a href="#ceremony">休業式 33 張官方攝影展</a></li>
+            <li><a href="#archives">始業式與課堂珍藏</a></li>
+            <li><a href="#wisdom">試教教學智慧</a></li>
+            <li><a href="#voices">實習手札金句</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- 2. Photo Lightbox Modal -->
-  <div id="photo-modal" class="app-modal hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col justify-between p-3 sm:p-5">
-    <!-- Lightbox Header -->
-    <div class="flex items-center justify-between text-white py-2">
-      <div class="flex items-center space-x-2">
-        <span id="lightbox-counter" class="text-xs px-2.5 py-1 rounded-full bg-slate-800 text-cyan-300 border border-slate-700 font-bold">1 / 1</span>
-        <span id="lightbox-title" class="text-xs sm:text-sm font-semibold truncate max-w-xs sm:max-w-md">相片寫真</span>
+      <div class="footer-bottom-bar">
+        <p>© 2023-2024 高師大 x 四維國小 小教教學實習全體團隊 ｜ 本成果展網站已全面執行個人資料隱私保護去除(手機、Email已移除)</p>
       </div>
-      <button onclick="closeModals()" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center transition">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
     </div>
+  </footer>
 
-    <!-- Lightbox Image Stage with Prev/Next -->
-    <div class="flex-1 flex items-center justify-center relative my-2 overflow-hidden">
-      <button onclick="prevLightboxPhoto()" class="absolute left-2 sm:left-4 z-20 w-11 h-11 rounded-full bg-slate-900/80 hover:bg-cyan-600 text-white flex items-center justify-center transition shadow-lg">
-        <i data-lucide="chevron-left" class="w-6 h-6"></i>
-      </button>
-      <img id="lightbox-img" src="" alt="相片展示" class="max-h-[80vh] max-w-[90vw] object-contain rounded-xl shadow-2xl transition-all duration-200">
-      <button onclick="nextLightboxPhoto()" class="absolute right-2 sm:right-4 z-20 w-11 h-11 rounded-full bg-slate-900/80 hover:bg-cyan-600 text-white flex items-center justify-center transition shadow-lg">
-        <i data-lucide="chevron-right" class="w-6 h-6"></i>
-      </button>
-    </div>
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" title="返回頂部">↑</button>
 
-    <!-- Lightbox Footer -->
-    <div class="text-center text-[11px] text-slate-400 py-1">
-      支援鍵盤左右箭頭切換，按 ESC 鍵關閉
-    </div>
-  </div>
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true">
+    <div class="lightbox-content-box">
+      <button id="lightbox-close" class="lightbox-close-icon" aria-label="關閉燈箱">✕</button>
+      <button id="lightbox-prev" class="lightbox-arrow-btn lightbox-btn-prev" aria-label="上一張">‹</button>
+      <button id="lightbox-next" class="lightbox-arrow-btn lightbox-btn-next" aria-label="下一張">›</button>
 
-  <!-- 3. Document Reader Modal (Official Authentic Layout) -->
-  <div id="document-modal" class="app-modal hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-5">
-    <div class="w-full max-w-4xl max-h-[90vh] rounded-3xl overflow-hidden flex flex-col official-doc-paper shadow-2xl">
-      <!-- Doc Header -->
-      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+      <div class="lightbox-media-col">
+        <img id="lightbox-img" src="" alt="放大預覽影像" />
+      </div>
+
+      <div class="lightbox-meta-col">
         <div>
-          <div class="flex items-center gap-2">
-            <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 font-bold">高師大公文真跡典藏</span>
-            <span id="doc-author" class="text-xs text-slate-500 font-medium">實習教師</span>
-          </div>
-          <h3 id="doc-title" class="text-sm sm:text-base font-bold text-slate-900 mt-0.5">實習文件檔案</h3>
+          <span id="lightbox-tag" class="lightbox-badge-pill">實習紀實</span>
+          <h3 id="lightbox-title" class="lightbox-caption-title">影像標題</h3>
+          <p id="lightbox-desc" class="lightbox-caption-text">影像詳細敘述說明...</p>
         </div>
-        <div class="flex items-center space-x-2">
-          <button onclick="window.print()" class="px-2.5 py-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-semibold flex items-center space-x-1">
-            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
-            <span class="hidden sm:inline">列印</span>
-          </button>
-          <button onclick="closeModals()" class="w-8 h-8 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-700 flex items-center justify-center">
-            <i data-lucide="x" class="w-4 h-4"></i>
-          </button>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1.1rem;">
+          <span id="lightbox-counter" style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">1 / 33</span>
+          <span style="font-size: 0.82rem; color: var(--gold-400); font-weight: 600;">🐋 52Hz Resonance</span>
         </div>
-      </div>
-
-      <!-- Doc Body -->
-      <div id="doc-content-body" class="p-5 sm:p-8 overflow-y-auto custom-scrollbar flex-1 space-y-4"></div>
-    </div>
-  </div>
-
-  <!-- 4. PDF Modal (Vector PDF.js Online Reader with Canvas Flipping) -->
-  <div id="pdf-modal" class="app-modal hidden fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-md flex items-center justify-center p-2 sm:p-4">
-    <div class="glass-panel w-full max-w-6xl h-[92vh] rounded-3xl overflow-hidden flex flex-col border border-sky-500/40 shadow-2xl">
-      <!-- Top Reader Toolbar -->
-      <div class="px-3 sm:px-5 py-2.5 sm:py-3 border-b border-slate-800 flex flex-wrap items-center justify-between bg-slate-900/90 gap-2 flex-shrink-0">
-        <!-- Title & Badge -->
-        <div class="flex items-center space-x-2 min-w-0 max-w-xs sm:max-w-sm md:max-w-md">
-          <span class="px-2 py-0.5 rounded-md bg-cyan-950 text-cyan-300 text-[10px] font-bold border border-cyan-700/60 flex-shrink-0">向量 PDF</span>
-          <span id="pdf-title" class="font-bold text-white text-xs sm:text-sm truncate">PDF 檢視器</span>
-        </div>
-
-        <!-- Middle Controls: Pagination & Zoom -->
-        <div class="flex items-center space-x-1 sm:space-x-2 text-xs">
-          <!-- Page Controls -->
-          <div class="flex items-center bg-slate-800/80 rounded-xl px-2 py-1 border border-slate-700/70 space-x-1">
-            <button id="pdf-prev-btn" onclick="prevPdfPage()" class="p-1 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700 disabled:opacity-40 transition" title="上一頁 (方向鍵 ←)">
-              <i data-lucide="chevron-left" class="w-4 h-4"></i>
-            </button>
-            <div class="flex items-center space-x-1 text-slate-200 text-xs px-1">
-              <span>第</span>
-              <input id="pdf-page-input" type="number" min="1" value="1" onchange="goToPdfPage(this.value)" class="w-10 bg-slate-900 border border-slate-700 rounded text-center text-xs py-0.5 text-cyan-300 font-bold focus:outline-none focus:border-cyan-500">
-              <span>/</span>
-              <span id="pdf-total-pages" class="font-bold text-slate-400">1</span>
-              <span>頁</span>
-            </div>
-            <button id="pdf-next-btn" onclick="nextPdfPage()" class="p-1 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700 disabled:opacity-40 transition" title="下一頁 (方向鍵 →)">
-              <i data-lucide="chevron-right" class="w-4 h-4"></i>
-            </button>
-          </div>
-
-          <!-- Zoom Controls -->
-          <div class="hidden sm:flex items-center bg-slate-800/80 rounded-xl px-2 py-1 border border-slate-700/70 space-x-1">
-            <button onclick="zoomOutPdf()" class="p-1 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700 transition" title="縮小 (-)">
-              <i data-lucide="zoom-out" class="w-3.5 h-3.5"></i>
-            </button>
-            <span id="pdf-zoom-text" class="text-[11px] font-semibold text-slate-300 w-12 text-center">適應</span>
-            <button onclick="zoomInPdf()" class="p-1 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700 transition" title="放大 (+)">
-              <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
-            </button>
-            <button onclick="toggleFitWidthPdf()" class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700 text-cyan-300 hover:bg-slate-600 transition" title="自適應寬度">
-              適應
-            </button>
-          </div>
-
-          <!-- View Mode Toggle: Single vs Continuous -->
-          <button id="pdf-mode-btn" onclick="togglePdfViewMode()" class="hidden md:flex items-center gap-1 px-2.5 py-1 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/70 text-slate-300 hover:text-white transition text-xs font-semibold" title="切換單頁翻閱 / 連續捲動">
-            <i data-lucide="book-open" class="w-3.5 h-3.5 text-cyan-400"></i>
-            <span id="pdf-mode-text">單頁翻閱</span>
-          </button>
-        </div>
-
-        <!-- Right Controls: Download & Close -->
-        <div class="flex items-center space-x-1.5 sm:space-x-2 flex-shrink-0">
-          <a id="pdf-download-link" href="#" target="_blank" class="px-2.5 py-1 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold flex items-center space-x-1 transition shadow-sm" title="以原始向量檔新分頁開啟或下載">
-            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            <span class="hidden sm:inline">新分頁 / 下載</span>
-          </a>
-          <button onclick="closeModals()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center transition">
-            <i data-lucide="x" class="w-4 h-4"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Main Canvas / Content Container -->
-      <div id="pdf-viewport-container" class="relative flex-1 bg-slate-950 overflow-auto flex items-center justify-center p-2 sm:p-4">
-        <!-- Loading Spinner -->
-        <div id="pdf-loading-spinner" class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-slate-950/80 backdrop-blur-xs">
-          <div class="w-10 h-10 border-4 border-cyan-500/30 border-t-cyan-400 rounded-full animate-spin mb-3"></div>
-          <p class="text-sm font-medium text-cyan-300">載入向量 PDF 畫布渲染中...</p>
-          <p class="text-xs text-slate-500 mt-1">高精度渲染 ‧ 支援無損向量文字縮放與線上翻閱</p>
-        </div>
-
-        <!-- Canvas Container for Single / Multi-page -->
-        <div id="pdf-canvas-container" class="w-full h-full flex items-center justify-center overflow-auto custom-scrollbar"></div>
-
-        <!-- Fallback native iframe (hidden by default, used if PDF.js fails) -->
-        <iframe id="pdf-iframe" src="" class="hidden w-full h-full border-none bg-slate-900"></iframe>
-      </div>
-    </div>
-  </div>
-  <!-- 5. Video Modal -->
-  <div id="video-modal" class="app-modal hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col justify-center items-center p-3 sm:p-6">
-    <div class="w-full max-w-4xl bg-slate-900 rounded-3xl overflow-hidden border border-purple-500/40 shadow-2xl flex flex-col">
-      <div class="p-3 sm:p-4 border-b border-slate-800 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded-full bg-purple-950 text-purple-300 text-[10px] font-bold border border-purple-600/40">實習影音實況</span>
-          <span id="video-title" class="font-bold text-white text-xs sm:text-sm truncate">課堂影音實況</span>
-        </div>
-        <button onclick="closeModals()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center transition">
-          <i data-lucide="x" class="w-4 h-4"></i>
-        </button>
-      </div>
-      <div class="p-3 sm:p-4 flex items-center justify-center bg-black">
-        <video id="video-player" controls class="w-full max-h-[72vh] rounded-xl shadow-lg"></video>
       </div>
     </div>
   </div>
 
-  <!-- Application Logic -->
+  <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

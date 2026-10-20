@@ -1,0 +1,21 @@
+<!-- =========================================================================
+     高師大 x 四維國小 小教教學實習『夢想共聲 ５２赫茲』成果展
+     Google Sites (Google 協作平台) 專屬嵌入代碼
+     ========================================================================= -->
+
+<!-- 【方式一：以嵌入程式碼 (Embed Code) 方式置入】 -->
+<iframe 
+  src="https://binghong-xu.github.io/112-elementary-teaching-practicum/" 
+  width="100%" 
+  height="960" 
+  frameborder="0" 
+  allow="autoplay; fullscreen" 
+  style="border: none; border-radius: 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.4); width: 100%; min-height: 900px;"
+  title="高師大 x 四維國小 小教教學實習『夢想共聲 ５２赫茲』成果展"
+></iframe>
+
+<!-- 
+【方式二：以網址 (Embed by URL) 方式置入】（最推薦，最簡單）
+在 Google Sites 右側工具箱點選「嵌入」-> 選擇「根據網址」，直接輸入：
+https://binghong-xu.github.io/112-elementary-teaching-practicum/
+-->

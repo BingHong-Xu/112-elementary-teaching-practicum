@@ -1,0 +1,1776 @@
+window.EXHIBITION_DATA = {
+  "meta": {
+    "title": "高師大 x 四維國小 小教教學實習『夢想共聲 ５２赫茲』成果展",
+    "subtitle": "國立高雄師範大學 師資培育中心 112學年度上學期集中實習數位成果展",
+    "theme": "夢想共聲 ５２赫茲 (Resonance of Dreams: 52 Hertz)",
+    "dateRange": "112學年度（2023.11.20 - 12.08）",
+    "location": "高雄市苓雅區四維國民小學",
+    "schools": [
+      "國立高雄師範大學",
+      "高雄市苓雅區四維國民小學"
+    ],
+    "privacyCompliant": true,
+    "privacyNotes": "本展覽網站已全面遵循個人資料保護原則，完整去除個人手機號碼、電子郵件地址(Email)及學號等私人隱私資訊，僅保留學術專業、實習班級與師資身分記載。"
+  },
+  "stats": {
+    "internsCount": 24,
+    "classesCount": 12,
+    "gradesCovered": 3,
+    "weeksDuration": 3,
+    "officialPhotosCount": 33,
+    "totalCuratedMedia": 158,
+    "trialLessonsConducted": 24,
+    "handwrittenCardsCollected": 70
+  },
+  "ceremonyPhotos": [
+    {
+      "id": 1,
+      "file": "01_休業式全體大合照_師長與實習生比心齊聚.jpg",
+      "category": "合照紀念",
+      "title": "全體大合照：師長與實習生比心齊聚",
+      "desc": "休業式典禮圓滿落幕，四維國小王淵智校長、高師大實習指導教授呂瑞芬校長、特邀指導教授方金雅教授、教務主任徐俐琪主任與全體24位實習教師比心齊聚，燦爛笑容見證三週實習的豐碩成長。"
+    },
+    {
+      "id": 2,
+      "file": "02_實習總召徐秉鴻蔡承軒與實習指導教授呂瑞芬校長合影.jpg",
+      "category": "師長風采",
+      "title": "實習幹部與實習指導教授呂瑞芬校長合影",
+      "desc": "實習總召徐秉鴻、實習生代表蔡承軒與實習指導教授呂瑞芬校長合影，感謝呂校長三週以來的細心督導與循循善誘。"
+    },
+    {
+      "id": 3,
+      "file": "03_四維形象牆前實習幹部與王淵智校長呂瑞芬校長方金雅教授比讚合影.jpg",
+      "category": "雙校領航",
+      "title": "形象牆前雙校攜手：實習幹部與師長比讚合影",
+      "desc": "於四維國小典雅形象牆前，實習幹部團隊與王淵智校長、呂瑞芬校長、方金雅教授並肩合影，展現高師大與四維國小深厚教育合作夥伴情誼。"
+    },
+    {
+      "id": 4,
+      "file": "04_實習幹部代表呈獻愛心感恩展板予王淵智校長與方金雅教授.jpg",
+      "category": "感恩呈獻",
+      "title": "實習幹部呈獻手寫愛心感恩展板",
+      "desc": "實習幹部代表全體24位實習教師，將凝聚滿滿感恩心意的大型愛心手寫展板，隆重呈獻給四維國小王淵智校長與高師大方金雅教授。"
+    },
+    {
+      "id": 5,
+      "file": "05_實習教師蔡承軒手持麥克風真誠發表實習心得與感謝.jpg",
+      "category": "心得發表",
+      "title": "實習教師代表蔡承軒發表真摯實習心得",
+      "desc": "實習教師蔡承軒手持麥克風，真摯分享三週入班觀察、試教挑戰與面對學生的深刻感動，感謝輔導教師與夥伴的一路扶持。"
+    },
+    {
+      "id": 6,
+      "file": "06_休業式全體師長與實習生比讚歡慶圓滿結業大合照.jpg",
+      "category": "合照紀念",
+      "title": "全體師長與實習生比讚歡慶圓滿結業",
+      "desc": "典禮最後，全體師長與實習教師熱情豎起大拇指比讚，為「夢想共聲 ５２赫茲」三週教育實習畫下最圓滿耀眼的句點。"
+    },
+    {
+      "id": 7,
+      "file": "07_實習幹部與夥伴於夢想共聲52赫茲主視覺海報前比讚合影.jpg",
+      "category": "主視覺象徵",
+      "title": "實習幹部夥伴於「夢想共聲 ５２赫茲」主視覺海報前合影",
+      "desc": "幹部們站在精心設計的深海藍鯨主視覺海報前留下紀念。52赫茲的音波在教育海洋中共振，映照著實習生的熱忱與初心。"
+    },
+    {
+      "id": 8,
+      "file": "08_實習總召徐秉鴻與特邀指導教授方金雅教授海報前比讚合影.jpg",
+      "category": "師長風采",
+      "title": "實習總召徐秉鴻與特邀指導教授方金雅教授合影",
+      "desc": "總召徐秉鴻與特邀指導教授方金雅教授於主視覺海報前合影，方教授肯定實習團隊的卓越組織力與課堂教學風範。"
+    },
+    {
+      "id": 9,
+      "file": "09_實習總召徐秉鴻致開場詞_輔導教師與夥伴專注聆聽.jpg",
+      "category": "典禮盛況",
+      "title": "實習總召徐秉鴻致開場詞",
+      "desc": "實習校長徐秉鴻代表全體實習生致開場詞，娓娓道來三週從行前準備、試教磨練到入班實習的心路歷程，全場輔導教師與夥伴專注聆聽。"
+    },
+    {
+      "id": 10,
+      "file": "10_休業式會場全景_大螢幕播放三週實習回顧影片.jpg",
+      "category": "典禮盛況",
+      "title": "休業式會場全景：大螢幕播放三週實習回顧影片",
+      "desc": "四維國小二樓會議室座無虛席，大螢幕上播映著各班晨光、上課、遊戲與師生對話的點滴，引發在場師生陣陣溫暖共鳴。"
+    },
+    {
+      "id": 11,
+      "file": "11_大螢幕播映夢想共聲各自旅程_主持人手持講稿主持.jpg",
+      "category": "典禮盛況",
+      "title": "大螢幕播映夢想共聲各自旅程．主持人穩健串場",
+      "desc": "大螢幕呈現「夢想共聲，各自旅程」剪影，典禮主持人手持講稿、台風穩健地引導全場回味入班期間的感動每一刻。"
+    },
+    {
+      "id": 12,
+      "file": "12_四維國小王淵智校長致贈感謝狀予特邀指導教授方金雅教授.jpg",
+      "category": "雙校領航",
+      "title": "四維國小王淵智校長致贈感謝狀予方金雅教授",
+      "desc": "四維國小王淵智校長代表全校師生致贈感謝狀予高師大特邀指導教授方金雅教授，表彰教授悉心指導師資生之卓越貢獻。"
+    },
+    {
+      "id": 13,
+      "file": "13_四維國小王淵智校長致詞勉勵全體實習教師.jpg",
+      "category": "師長風采",
+      "title": "四維國小王淵智校長致詞勉勵全體實習教師",
+      "desc": "王淵智校長高度讚揚高師大實習生的專業態度、熱忱與對學生的愛護，期許每位準教師都能成為點亮孩子內心光芒的良師。"
+    },
+    {
+      "id": 14,
+      "file": "14_王淵智校長勉勵致詞_全場輔導教師與實習生熱烈鼓掌.jpg",
+      "category": "典禮盛況",
+      "title": "王校長勉勵致詞引發全場熱烈鼓掌",
+      "desc": "王校長語重心長且幽默風趣的勉勵，贏得全場四維輔導教師、行政團隊與高師大實習生的熱烈喝采與掌聲。"
+    },
+    {
+      "id": 15,
+      "file": "15_實習幹部與王淵智校長教務主任呂瑞芬校長方金雅教授形象牆合影.jpg",
+      "category": "雙校領航",
+      "title": "實習幹部與雙校校長、教務主任於形象牆合影",
+      "desc": "高師大實習幹部與四維國小王校長、徐教務主任、高師大呂校長、方教授齊聚形象牆，傳承教育火炬與世代使命。"
+    },
+    {
+      "id": 16,
+      "file": "16_實習教師代表手持麥克風真摯分享三週實習教學心得.jpg",
+      "category": "心得發表",
+      "title": "實習教師代表分享三週試教與班級經營心聲",
+      "desc": "實習教師代表分享從最初走進教室的緊張生澀，到能與孩子心意相通、引導思考的蛻變歷程，言語中充滿對輔導老師的感恩。"
+    },
+    {
+      "id": 17,
+      "file": "17_特邀指導教授方金雅教授致詞勉勵全體實習教師.jpg",
+      "category": "師長風采",
+      "title": "特邀指導教授方金雅教授致詞勉勵",
+      "desc": "方金雅教授深情致詞，勉勵實習教師在面對教育現場的繁複挑戰時，永遠保持初學者的熱忱與專業素養，把每一個孩子帶上來。"
+    },
+    {
+      "id": 18,
+      "file": "18_方金雅教授親切發表評核指導與對師資生之未來期許.jpg",
+      "category": "師長風采",
+      "title": "方金雅教授發表教學評核指導與教育期許",
+      "desc": "方教授結合多年師培與督導經驗，給予全體實習生具體的中肯回饋，鼓勵大家將這三週的實戰體悟化為未來教甄與任教的堅實基石。"
+    },
+    {
+      "id": 19,
+      "file": "19_休業式主持人林芳妤與洪瑋伶手持程序單於海報旁引言主持.jpg",
+      "category": "典禮盛況",
+      "title": "休業式主持人林芳妤與洪瑋伶優雅開場",
+      "desc": "主持人林芳妤與洪瑋伶老師手持精美活動程序單，於海報旁默契開場，流暢帶動整場典禮的溫馨節奏。"
+    },
+    {
+      "id": 20,
+      "file": "20_投影大螢幕播映實習剪影_控台幹部對照實習流程表.jpg",
+      "category": "幕後籌備",
+      "title": "投影大螢幕播映實習剪影．控台幹部嚴謹對表",
+      "desc": "控台區實習幹部全神貫注對照流程表與影音秒數，確保投影片、配樂與影音播放分毫不差，展現高度專業執行力。"
+    },
+    {
+      "id": 2121,
+      "file": "21_實習指導教授呂瑞芬校長致詞勉勵並指引教育熱忱.jpg",
+      "category": "師長風采",
+      "title": "實習指導教授呂瑞芬校長勉勵叮嚀",
+      "desc": "實習指導教授呂瑞芬校長回顧大家一學期以來的耕耘與磨合，叮嚀實習生莫忘在四維國小感受到的教育溫度與同頻共鳴。"
+    },
+    {
+      "id": 22,
+      "file": "22_主持人林芳妤與洪瑋伶於夢想共聲52赫茲大螢幕前共同主持.jpg",
+      "category": "典禮盛況",
+      "title": "主持人林芳妤與洪瑋伶於52赫茲大螢幕前共同主持",
+      "desc": "在深海藍鯨與滿月的夢幻視覺映照下，主持人引導全場進入全體致贈手寫感恩卡與大合影的高潮時刻。"
+    },
+    {
+      "id": 23,
+      "file": "23_實習幹部向王淵智校長與教務主任呈獻愛心手寫感恩卡展板.jpg",
+      "category": "感恩呈獻",
+      "title": "實習幹部向王校長與徐教務主任呈獻愛心展板",
+      "desc": "實習幹部雙手奉上集合24位實習生真情字句的手寫愛心板，向四維國小行政團隊與輔導團隊致上崇高敬意。"
+    },
+    {
+      "id": 24,
+      "file": "24_四維國小教務主任致勉勵詞_輔導教師與實習生聆聽.jpg",
+      "category": "師長風采",
+      "title": "四維國小教務處徐俐琪主任致勉勵詞",
+      "desc": "徐俐琪主任感謝高師大師生對四維國小的信賴與全心投入，讚許實習生帶給四維校園全新的活力與多元教學風貌。"
+    },
+    {
+      "id": 25,
+      "file": "25_休業式典禮前實習幹部進行會場最後巡檢與投影測試.jpg",
+      "category": "幕後籌備",
+      "title": "典禮前夕：實習幹部進行會場最後巡檢與投影測試",
+      "desc": "典禮開始前一小時，幹部團隊在二樓會議室逐一測試投影視角、麥克風收音與動線，確保每一細節盡善盡美。"
+    },
+    {
+      "id": 26,
+      "file": "26_休業式典禮前幹部團隊精心佈置座位席卡名牌與茶點禮品.jpg",
+      "category": "幕後籌備",
+      "title": "典禮前夕：幹部團隊精心佈置座位席卡與茶點",
+      "desc": "籌備小組用心印製長官師長桌牌席卡，整齊排佈精美茶點與手冊，以最高規格迎接入場的每一位長輩與夥伴。"
+    },
+    {
+      "id": 27,
+      "file": "27_會場前置作業_實習幹部齊心協力張貼海報與調試控台.jpg",
+      "category": "幕後籌備",
+      "title": "會場前置作業：幹部齊心協力張貼海報與架設控台",
+      "desc": "幹部們齊心協力丈量距離、張貼主題海報，並將筆電、投影設備與音響系統完成連線測試。"
+    },
+    {
+      "id": 28,
+      "file": "28_實習幹部團隊於夢想共聲52赫茲主視覺海報前歡慶合影.jpg",
+      "category": "幕後籌備",
+      "title": "籌備團隊榮耀時刻：實習幹部團隊於海報前合影",
+      "desc": "經過數週策劃與多次籌備會議，幹部團隊在親手完成的會場海報前留下自信燦爛的笑容。"
+    },
+    {
+      "id": 29,
+      "file": "29_卡片長李沛錞親繪_夢想共聲52Hz藍鯨手繪插畫主視覺卡.jpg",
+      "category": "主視覺象徵",
+      "title": "卡片長李沛錞親繪「夢想共聲 52Hz 藍鯨」手繪插畫主視覺卡",
+      "desc": "由卡片長李沛錞老師手繪的紀念卡，以深藍海洋中悠游的52赫茲藍鯨為意象，象徵每位師資生在教育汪洋中尋得彼此的心靈共振。"
+    },
+    {
+      "id": 30,
+      "file": "30_休業式官方簡報首頁_夢想共聲52赫茲同頻共振的教育篇章.jpg",
+      "category": "主視覺象徵",
+      "title": "官方簡報封面：夢想共聲 ５２赫茲 — 同頻共振的教育篇章",
+      "desc": "休業式大螢幕官方簡報封面，藍金交織的深邃星海與波光，宣告這場教育共振盛典正式揭幕。"
+    },
+    {
+      "id": 31,
+      "file": "31_休業式官方簡報_夢想共聲52赫茲感恩音符與教育夢想理念.jpg",
+      "category": "主視覺象徵",
+      "title": "官方簡報核心理念：感恩音符與教育夢想的共鳴",
+      "desc": "簡報闡述「夢想共聲」理念：在四維國小這座溫暖島嶼上，實習教師與指導師長相互啟迪，將每道獨立聲波匯聚為教育交響樂。"
+    },
+    {
+      "id": 32,
+      "file": "32_休業式官方簡報_月亮與52赫茲深海藍鯨意象主視覺.jpg",
+      "category": "主視覺象徵",
+      "title": "官方簡報主意象：深海藍鯨與溫柔明月",
+      "desc": "簡報呈現深海藍鯨躍向明月的意象，象徵教育工作者如同守護之月，以溫暖的光芒引領潛藏於深海中的每一顆年輕心靈。"
+    },
+    {
+      "id": 33,
+      "file": "33_休業式官方活動程序單與籌備小組八大組別職責分配表.jpg",
+      "category": "幕後籌備",
+      "title": "休業式官方程序單與籌備小組八大組別職責分配表",
+      "desc": "休業式官方文宣完整紀錄典禮流程與籌備組分工，涵蓋總召、主持、公關、美編、影音、攝影、場地與技術控台八大組別。"
+    }
+  ],
+  "classesData": [
+    {
+      "gradeSection": "低年級",
+      "classCode": "2-7",
+      "className": "二年七班",
+      "mentorTeacher": "蕭淑汶 老師",
+      "internTeachers": [
+        {
+          "name": "吳依潔",
+          "department": "教育學系碩士班",
+          "role": "實習副組長（低年級）",
+          "subject": "數學 / 國語文",
+          "demoUnit": "康軒二上第8單元《幾時幾分》、國語情境閱讀教學",
+          "quote": "在低年級純真清澈的眼眸中，我看見了教學最單純的快樂。孩子們每一次舉起的小手、每一句興奮的「老師我看懂了！」，都是敲擊在我心頭最動聽的頻率。",
+          "highlight": "運用鐘面教具進行趣味分組競賽，將抽象的時間概念轉化為孩子的生活情境遊戲；晨間耐心傾聽孩子分享生活瑣事，建立深厚信任感。"
+        },
+        {
+          "name": "蔡佳芸",
+          "department": "特殊教育學系",
+          "role": "實習教師",
+          "subject": "國語文",
+          "demoUnit": "國語《幸福湯圓》學習單與繪本情境延伸教學",
+          "quote": "我是蔡佳芸，正在成為教育「探星者」的路上！星探的工作是在人群找與眾不同的人；而探星是在每一個學生身上找到他與眾不同的亮點。不求每個孩子都成為最耀眼的那顆星，但願他們都在自己的世界裡引以為傲。",
+          "highlight": "發揮特教專業敏銳度，以差異化教學溫柔包容每位孩子的步調，設計「幸福湯圓」多層次學習單，讓全班孩子皆能感受到被看見的成就感。"
+        }
+      ],
+      "classHighlight": "二年七班充滿歡笑與朝氣，蕭淑汶老師溫暖沉穩的班級經營引領兩位實習生看見班級常規與師生信賴的深層連結。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_6_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E5%90%B3%E4%BE%9D%E6%BD%94%E8%94%A1%E4%BD%B3%E8%8A%B8%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg"
+    },
+    {
+      "gradeSection": "低年級",
+      "classCode": "2-8",
+      "className": "二年八班",
+      "mentorTeacher": "蔡素卿 老師",
+      "internTeachers": [
+        {
+          "name": "陳嬿亘",
+          "department": "華語文教學研究所碩士班",
+          "role": "實習教師",
+          "subject": "國語文",
+          "demoUnit": "國語第10課《去農場玩-看圖說故事》",
+          "quote": "把語言的種子撒在低年級孩子的心田裡，看他們從生澀的字音到能生動描繪農場的一草一木，這份共鳴讓我深刻體會身為人師的幸福。",
+          "highlight": "善用生動圖卡與肢體語言帶領孩子觀察圖片細節，引導看圖說話與創意思維，課堂氣氛活潑熱烈。"
+        },
+        {
+          "name": "曾麗萍",
+          "department": "臺灣文化語言與創意學系碩士班",
+          "role": "實習教師",
+          "subject": "數學",
+          "demoUnit": "數學第8單元《幾時幾分 - 時鐘小達人》",
+          "quote": "從一開始急著給出錦囊妙計，到學會「製造需求」讓孩子主動去探究時鐘長針與短針的秘密，這三週讓我完成了一場教學思維的昇華。",
+          "highlight": "設計「時鐘小達人」闖關情境，利用教具鐘面讓二年級孩子動手撥轉，在生活中發現時間的規律。"
+        }
+      ],
+      "classHighlight": "蔡素卿老師經驗豐富，悉心傳授低年級常規建立與生活習慣指導秘訣，給予實習生最堅實的教學後盾。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_8_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E6%9B%BE%E9%BA%97%E8%90%8D%E9%99%B3%E5%AC%BF%E4%BA%98%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B102.jpg"
+    },
+    {
+      "gradeSection": "低年級",
+      "classCode": "2-10",
+      "className": "二年十班",
+      "mentorTeacher": "孔秀麗 老師",
+      "internTeachers": [
+        {
+          "name": "徐秉鴻",
+          "department": "科學教育暨環境教育研究所碩士班",
+          "role": "實習總召 / 實習校長 / 低年級組長",
+          "subject": "國語文 / 科學生活探究",
+          "demoUnit": "生活探究與國語文公開演示（趣味觀察與引導提問）",
+          "quote": "統籌三週實習與休業式雖任重道遠，但在2-10班孩子與孔老師身上，我找回了做教育最純粹的赤子之心。52赫茲不再是孤獨的歌聲，而是我們24人齊聚的合奏！",
+          "highlight": "兼顧實習全校行政總籌與低年級教學，帶領孩子從生活微小事物展開探究觀察，課堂引導層次分明、引人入勝。"
+        },
+        {
+          "name": "蔡承軒",
+          "department": "教育學系",
+          "role": "實習教師 / 休業式心得發表代表",
+          "subject": "數學",
+          "demoUnit": "數學第8單元《幾時幾分》生活實境解題",
+          "quote": "試教時面對孩子千奇百怪的提問，我學會了放下講台上的成見，蹲下身子傾聽孩子的思路。教育不是把水桶倒滿，而是把火種點燃！",
+          "highlight": "代表全體實習生於休業式發表感言，課堂教學語言親和自然，善於捕捉學生的思考盲點並耐心引導釐清。"
+        }
+      ],
+      "classHighlight": "孔秀麗老師以愛與耐心治班，教室常規井然有序，兩位實習老師在孔老師身上汲取了深厚的班級經營智慧。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_10_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E5%BE%90%E7%A7%89%E9%B4%BB%E8%94%A1%E6%89%BF%E8%BB%92%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B102.jpg"
+    },
+    {
+      "gradeSection": "中年級",
+      "classCode": "4-6",
+      "className": "四年六班",
+      "mentorTeacher": "陳玟瑛 老師",
+      "internTeachers": [
+        {
+          "name": "鄭凱瀚",
+          "department": "中山大學劇場藝術學系",
+          "role": "實習副校長 / 中年級組長",
+          "subject": "國語文",
+          "demoUnit": "國語第11課《美食島》戲劇互動與情境引導教學",
+          "quote": "教室就是最動人的劇場。當我把表演藝術的情境互動融入語文課堂，看見孩子們眼中閃爍的專注目光，我知道我們的心已經在同一條頻率上共振。",
+          "highlight": "融入戲劇教育技巧，打破傳統課本單向朗讀，以角色扮演與肢體張力引領學生深入文本，激發全班熱烈討論。"
+        },
+        {
+          "name": "李沛錞",
+          "department": "東南亞學系碩士班",
+          "role": "中年級副組長 / 卡片長（主視覺藍鯨手繪創作者）",
+          "subject": "國語文",
+          "demoUnit": "國語第11課《美食島》課文理解與生活經驗共鳴",
+          "quote": "親手為大家繪下這隻52赫茲深海藍鯨，正如我們在四維國小的相遇。406班每個孩子寫給我的暖心小卡，是我一輩子珍藏的教育禮物。",
+          "highlight": "親手手繪「夢想共聲 52Hz 藍鯨」主視覺；結業時406全體同學為沛錞老師精心繪製了52張滿載感恩手寫卡片，師生情深感人至深。"
+        }
+      ],
+      "classHighlight": "四年六班活力充沛、文思敏捷，在陳玟瑛老師卓越指導下，實習生展現跨域藝術與多元文化的精彩教學火花。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_1_11_10%E6%8B%9C%E8%A8%AA4%E5%B9%B413%E7%8F%AD_%E9%BB%83%E6%B7%91%E8%8A%AC%E8%80%81%E5%B8%AB%EF%BC%9A%E6%9D%B1%E5%8D%97%E4%BA%9E%E5%AD%B8%E7%A2%A9%E4%B8%89%E6%9D%8E%E6%B2%9B%E9%8C%9E%E3%80%81%E4%B8%AD%E5%B1%B1%E6%88%B2%E5%8A%87%E5%9B%9B%E9%84%AD%E5%87%B1%E7%80%9A.jpg"
+    },
+    {
+      "gradeSection": "中年級",
+      "classCode": "4-8",
+      "className": "四年八班",
+      "mentorTeacher": "吳佳玲 老師",
+      "internTeachers": [
+        {
+          "name": "曾郁涵",
+          "department": "中國文學系",
+          "role": "實習教師",
+          "subject": "國語文",
+          "demoUnit": "國語教學演示《平凡的大俠》文本深究與差異化引導",
+          "quote": "從試教時被教授提醒「差異化教學如何延伸」，到在4-8班課堂實踐分層提問，文字與文學在此刻轉化為滋養孩子心靈的甘泉。",
+          "highlight": "從文本第四段切入核心教學，引導學生站在不同角色角度體會心境，課堂提問深刻精準，引導高層次思維。"
+        },
+        {
+          "name": "丁云翔",
+          "department": "中國文學系碩士班",
+          "role": "實習教師",
+          "subject": "數學",
+          "demoUnit": "數學第8單元《分數》教學演示與操作探究",
+          "quote": "數學看似冷峻嚴謹，但透過生活中的分塊與視覺化具象操作，也能讓孩子看見如詩般的邏輯之美。",
+          "highlight": "以直觀圖卡與生活實物演示分數概念，有效破除孩子對等值分數與真分數的迷思概念。"
+        }
+      ],
+      "classHighlight": "吳佳玲老師悉心指導試教教案與課堂節奏掌握，班級學習氛圍濃厚，師生互動默契十足。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_3_4-8%E6%9B%BE%E9%83%81%E6%B6%B5%E3%80%81%E4%B8%81%E4%BA%91%E7%BF%94%E5%85%A5%E7%8F%AD%E5%90%88%E5%BD%B1.jpg"
+    },
+    {
+      "gradeSection": "中年級",
+      "classCode": "4-10",
+      "className": "四年十班",
+      "mentorTeacher": "黎怡萱 老師",
+      "internTeachers": [
+        {
+          "name": "余青黛",
+          "department": "表演藝術碩士班",
+          "role": "實習教師",
+          "subject": "國語文",
+          "demoUnit": "國語試教《海中的熱帶雨林》（海洋生態與語文想像）",
+          "quote": "結合海洋意象與表藝肢體律動，讓孩子在朗讀珊瑚礁與海洋生靈時身歷其境。教育就是一場彼此聽見的溫柔旅程。",
+          "highlight": "將表演藝術與自然生態文本結合，引導學生透過聲音表情與動作詮釋課文，賦予語文教學豐沛生命力。"
+        },
+        {
+          "name": "張浚祐",
+          "department": "成人教育研究所碩士班",
+          "role": "實習教師",
+          "subject": "數學",
+          "demoUnit": "數學演課《認識二位小數》具象位值轉換",
+          "quote": "成教背景讓我更看重「學習者的主體性」。在國小中年級課堂，唯有讓孩子親自操作、犯錯、討論，真正的學習才會發生。",
+          "highlight": "設計位值積木與生活金錢情境，引導學生自然建構一位小數到二位小數的概念銜接。"
+        }
+      ],
+      "classHighlight": "黎怡萱老師以溫柔堅定著稱，引導實習生深入體察中年級學生的心理發展特質，給予細緻入微的輔導指導。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_0_4-10%E5%BC%B5%E6%B5%9A%E7%A5%90%E4%BD%99%E9%9D%92%E9%BB%9B%E5%85%A5%E7%8F%AD%E5%B0%8D%E8%A9%B1%E5%90%88%E5%BD%B1.jpg"
+    },
+    {
+      "gradeSection": "中年級",
+      "classCode": "4-12",
+      "className": "四年十二班",
+      "mentorTeacher": "蕭雅華 老師",
+      "internTeachers": [
+        {
+          "name": "王品貴",
+          "department": "教育學系碩士班",
+          "role": "實習教師",
+          "subject": "國語文 / 數學",
+          "demoUnit": "國語第11課《美食島》課文理解 & 數學《認識二位小數》",
+          "quote": "每一次走進教室，都是與靈魂的相遇。從教案的字句琢磨，到台上從容不迫的引導，感謝四維國小給我這段破繭而出的時光。",
+          "highlight": "跨學科試教國語與數學兩大領域，教案結構嚴謹完整，善於運用提問促進班級全員深度思考。"
+        },
+        {
+          "name": "張育瑄",
+          "department": "英語學系",
+          "role": "實習教師",
+          "subject": "國語文 / 數學",
+          "demoUnit": "國語第11課《美食島》生字探究 & 數學《認識二位小數》",
+          "quote": "語言是心靈的橋樑。在文字筆畫與數學位值之間，看著孩子們專注練習的側臉，那是身為老師最驕傲的景致。",
+          "highlight": "擔任試教評委提問記錄，善於分析課堂教學語言，生字教學重視部件結構與字理引申，課堂管理條理井然。"
+        }
+      ],
+      "classHighlight": "蕭雅華老師在教學設計與學生親師溝通上傾囊相授，帶領實習生體會教學現場的細緻與溫度。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_4_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E7%8E%8B%E5%93%81%E8%B2%B4%E5%BC%B5%E8%82%B2%E7%91%84%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg"
+    },
+    {
+      "gradeSection": "高年級",
+      "classCode": "5-5",
+      "className": "五年五班",
+      "mentorTeacher": "郭威慶 老師",
+      "internTeachers": [
+        {
+          "name": "南雅娟",
+          "department": "藝術產業學士原住民專班",
+          "role": "實習教師",
+          "subject": "國語文",
+          "demoUnit": "國語文領域教學設計《嘗嘗我的家鄉味》多元文化飲食探討",
+          "quote": "家鄉的滋味，是土地與文化的深情記憶。把多元文化視野帶入五五班，讓孩子懂得欣賞不同族群的美好，這就是我的教育夢。",
+          "highlight": "融入原民文化與在地美食視角，帶領高年級學生深入思考文本背後的文化認同與情感連結。"
+        },
+        {
+          "name": "賴泓均",
+          "department": "地理學系",
+          "role": "實習教師",
+          "subject": "教學演示 / 班級民主經營實踐",
+          "demoUnit": "高年級教學演示（空間認知與班級專題探究）",
+          "quote": "郭威慶老師教我們「棒子與胡蘿蔔的拿捏，黏但不能太黏」。高年級民主自治的班遊規劃海報，讓我看到了孩子們無限的自律與潛能！",
+          "highlight": "深入觀察高年級班級經營與同儕衝突化解機制，撰寫詳實深刻的三週實習手札，心得見解深刻專業。"
+        }
+      ],
+      "classHighlight": "郭威慶老師以民主自治、大隊接力團隊凝聚力與專題海報設計引領五五班，展現令人讚嘆的高年級班級凝聚力。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_5_%E5%AF%A6%E7%BF%92%E6%95%99%E5%B8%AB%E5%85%A5%E7%8F%AD%E5%B0%8D%E8%A9%B1%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg"
+    },
+    {
+      "gradeSection": "高年級",
+      "classCode": "5-9",
+      "className": "五年九班",
+      "mentorTeacher": "鄭淑萍 老師",
+      "internTeachers": [
+        {
+          "name": "司亦妍",
+          "department": "教育學系",
+          "role": "實習教師",
+          "subject": "國語文",
+          "demoUnit": "國語教學演示（連續雙節公開課：結構化閱讀提問）",
+          "quote": "與瑋伶攜手完成連續兩節公開演示，從引發動機到文本思辨，我們在五九班看見了高年級學生的思想深度。",
+          "highlight": "與洪瑋伶老師默契配合，連貫實施公開授課第三、四節，運用心智圖與小組提問策略提升閱讀理解力。"
+        },
+        {
+          "name": "洪瑋伶",
+          "department": "教育學系",
+          "role": "實習教師 / 休業式主持人",
+          "subject": "國語文 / 數學",
+          "demoUnit": "國語教學演示 & 數學《公因數與公倍數》生活實境解題",
+          "quote": "主持休業式時，看著台上台下淚光與笑容交織，我知道「夢想共聲 ５２赫茲」不僅僅是一句口號，而是深深烙印在我們每個人靈魂裡的印記。",
+          "highlight": "優雅大方主持休業式典禮；在課堂教學中善用童軍繩與生活道具將抽象數學概念具象化，激發學生動手解題。"
+        }
+      ],
+      "classHighlight": "鄭淑萍老師教學嚴謹細緻，指導兩位實習生完成高難度的連貫雙節公開授課演示，深受師生讚許。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_14_5%E5%B9%B49%E7%8F%AD_%E6%95%99%E8%82%B2%E5%9B%9B%E5%8F%B8%E4%BA%A6%E5%A6%8D%E3%80%81%E6%95%99%E8%82%B2%E5%9B%9B%E6%B4%AA%E7%91%8B%E4%BC%B6.jpg"
+    },
+    {
+      "gradeSection": "高年級",
+      "classCode": "6-5",
+      "className": "六年五班",
+      "mentorTeacher": "黃佳瑜 老師",
+      "internTeachers": [
+        {
+          "name": "林芳妤",
+          "department": "教育學系",
+          "role": "實習教師 / 休業式主持人",
+          "subject": "國語文",
+          "demoUnit": "國語第14課《明智的抉擇》高年級思辨與學習單設計",
+          "quote": "六年級孩子的心思敏感而成熟。透過《明智的抉擇》，我們引導孩子在成長的分岔路上思考人生價值，也讓我看見身為人師最重要的引路人角色。",
+          "highlight": "與洪瑋伶攜手主持休業式；公開演示教案設計精良，針對高年級思維設計高層次討論學習單。"
+        },
+        {
+          "name": "羅渝傑",
+          "department": "教育學系",
+          "role": "實習教師",
+          "subject": "國語文 / 數學",
+          "demoUnit": "國語文閱讀推展演示 & 數學《縮放圖與比例尺》",
+          "quote": "「師生互動不是一問一答，而是要把問題丟給同學，促成學生之間的一問多答。」這份在試教中學到的真功夫，是我三週最珍貴的收穫。",
+          "highlight": "實習手札詳實記錄反霸凌處置、畢業旅行民主選座、小組發言麥克風傳遞技巧等極具實用價值的班級經營真諦。"
+        }
+      ],
+      "classHighlight": "黃佳瑜老師以民主協商、即時溝通與家長合作為核心，帶領實習生體悟高年級成熟班級經營的精準手腕。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_12_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E6%9E%97%E8%8A%B3%E5%A6%A4%E7%BE%85%E6%B8%9D%E5%82%91%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg"
+    },
+    {
+      "gradeSection": "高年級",
+      "classCode": "6-9",
+      "className": "六年九班",
+      "mentorTeacher": "林思嘉 老師",
+      "internTeachers": [
+        {
+          "name": "邱靖雯",
+          "department": "華語文教學研究所碩士班",
+          "role": "實習教師",
+          "subject": "國語文",
+          "demoUnit": "語文課堂多元閱讀與文化融入教學",
+          "quote": "在六年級的課堂裡，學生的思考遠比我們想像的深刻。每一次對話，都是心靈與智慧的激盪。",
+          "highlight": "擔任試教紀錄與語文教學反思，以華語文專業背景深化國小學童詞彙理解與篇章賞析能力。"
+        },
+        {
+          "name": "陳新絜",
+          "department": "科學教育暨環境教育研究所碩士班",
+          "role": "實習教師",
+          "subject": "數學",
+          "demoUnit": "數學六上第9單元《規律問題 / 間隔問題》幾何規律探究",
+          "quote": "間隔問題不再是死記植樹公式！透過圖形建模與動手畫圖，讓孩子自己發現規律，那種豁然開朗的眼神，是最美麗的教育風景。",
+          "highlight": "精心自編《數學9-1間隔問題學習單》與演示簡報，由具體圖形引導至代數規律，教學邏輯條理清晰。"
+        }
+      ],
+      "classHighlight": "林思嘉老師課堂風趣活潑，營造鼓勵提問與勇於發表的班級文化，提供實習生寬廣的教學探索空間。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_11_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E5%BE%90%E7%A7%89%E9%B4%BB%E8%94%A1%E6%89%BF%E8%BB%92%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg"
+    },
+    {
+      "gradeSection": "高年級",
+      "classCode": "6-10",
+      "className": "六年十班",
+      "mentorTeacher": "李俊霖 老師",
+      "internTeachers": [
+        {
+          "name": "易冠蓁",
+          "department": "軟體工程研究所碩士班",
+          "role": "高年級副組長",
+          "subject": "國語文 / 資訊科技融入",
+          "demoUnit": "國語公開演示（數位科技與資訊思維融入語文教學）",
+          "quote": "親手為全班29位同學寫下專屬小卡，在道別那一刻看見孩子們眼眶的淚光與手寫卡片，這三週的每一分努力都無比值得。",
+          "highlight": "善用科技工具融入語文教學，結業時親自書寫29張個人專屬卡片致贈全班學童，展現無比溫柔與用心。"
+        },
+        {
+          "name": "吳俋達",
+          "department": "軟體工程學系",
+          "role": "實習副校長 / 高年級組長",
+          "subject": "數學",
+          "demoUnit": "數學第11冊8-2《比例與生活應用》公開授課演示",
+          "quote": "從試教被點評語言不夠童趣，到能在六上課堂流暢以比率引導孩子解決生活難題。教育是一門科學，更是一門充滿溫度的藝術。",
+          "highlight": "擔任實習副校長與高年級組長，統籌各班行政與活動事宜，數學公開授課演示嚴謹紮實，深獲輔導教師肯定。"
+        }
+      ],
+      "classHighlight": "李俊霖老師以親和幽默且具原則的風格凝聚六十班，兩位軟體工程背景實習生在此展現了理科理性與教育感性的完美結合。",
+      "dialoguePhoto": "assets/images/dialogue/dialogue_13_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E6%98%93%E5%86%A0%E8%93%81%E5%90%B3%E4%BF%8B%E9%81%94%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2023.10.13",
+      "phase": "行前試煉",
+      "title": "數學領域課堂試教與教授嚴謹講評",
+      "location": "高師大師培教室",
+      "desc": "全體實習生逐一進行數學科試教，由指導教授與特邀教授方針對教學語言、引起動機、布題邏輯與差異化策略進行犀利講評與雕琢，奠定紮實基本功。"
+    },
+    {
+      "date": "2023.10.27",
+      "phase": "行前試煉",
+      "title": "國語文領域課堂試教與提問策略精研",
+      "location": "高師大師培教室",
+      "desc": "全體實習生展開國語文試教，深入探討文本大意、高層次提問設計、生字筆順與板書規範，歷經多次教案修訂，做好入班全副準備。"
+    },
+    {
+      "date": "2023.11.13 - 11.17",
+      "phase": "入班見習",
+      "title": "初訪四維國小．入班對話與實習計畫擬定",
+      "location": "四維國小各班級",
+      "desc": "實習生初次踏入四維校園，拜訪12位實習輔導導師，進行深度交流對話、熟悉班級作息與校舍平面，並逐一擬定各班三週實習計畫書。"
+    },
+    {
+      "date": "2023.11.20",
+      "phase": "啟航相遇",
+      "title": "實習始業式典禮．正式入班啟航",
+      "location": "四維國小二樓會議室",
+      "desc": "王淵智校長、呂瑞芬教授、徐俐琪教務主任引領全體實習生舉行始業式，隨後分低、中、高三組帶入各班，正式開啟三週緊密扎實的入班實習之旅。"
+    },
+    {
+      "date": "2023.11.20 - 12.08",
+      "phase": "晨昏共振",
+      "title": "三週沉浸入班：常規引導、晨光活動與個別輔導",
+      "location": "四維國小各年段",
+      "desc": "深入參與晨光自習、掃區督導、課間活動、午餐潔牙、作業批改與個別學生學習支援，見習導師高超的班級經營藝術。"
+    },
+    {
+      "date": "2023.12.01 - 12.08",
+      "phase": "講台綻放",
+      "title": "公開授課試教演示．觀課與議課深度研討",
+      "location": "四維國小各實習班級",
+      "desc": "24位實習教師全面登台進行公開授課演示，四維輔導教師、同儕夥伴與高師大教授親臨觀課，課後進行深度議課，教學相長。"
+    },
+    {
+      "date": "2023.12.08",
+      "phase": "榮耀共聲",
+      "title": "休業式盛典『夢想共聲 ５２赫茲』圓滿結業",
+      "location": "四維國小二樓會議室",
+      "desc": "回顧影片撥動全場心弦，實習幹部呈獻全體手寫愛心感恩展板，王校長致贈感謝狀，實習生代表真情告白，在比心比讚中定格永恆。"
+    },
+    {
+      "date": "2023.12.29 & 2024.01.05",
+      "phase": "反思迴響",
+      "title": "返校實習總結成果發表會（雙梯次深度省思）",
+      "location": "高師大會議室",
+      "desc": "分兩梯次進行個人實習簡報專題反思，將三週血淚與感動化為教育信念，圓滿完成112上小教教學實習全部修業歷程。"
+    }
+  ],
+  "leadership": {
+    "principalsAndProfessors": [
+      {
+        "name": "王淵智",
+        "title": "校長",
+        "org": "高雄市立四維國民小學",
+        "desc": "致力打造具備國際視野與人文關懷的優質校園，熱忱開放學校資源與優秀師資，全心護航高師大實習生的專業培育。"
+      },
+      {
+        "name": "呂瑞芬",
+        "title": "校長 / 實習指導教授",
+        "org": "國立高雄師範大學 師培中心",
+        "desc": "以深厚的教育實務與宏觀視野指引全體實習生，陪伴大家從校內試教到實地入班，啟發無數師資生堅守教育初心。"
+      },
+      {
+        "name": "方金雅",
+        "title": "特邀指導教授",
+        "org": "國立高雄師範大學 師培中心",
+        "desc": "嚴謹督導課堂試教與公開演示，以敏銳洞察與溫暖勉勵點出教學核心盲點，為師資生未來教甄與任教打下厚實根基。"
+      },
+      {
+        "name": "徐俐琪",
+        "title": "教務主任",
+        "org": "高雄市立四維國民小學",
+        "desc": "全權統籌實習學校之行政對接、始業式與休業式行政支援，為實習生提供最溫暖完善的行政後盾。"
+      }
+    ],
+    "cadres": [
+      {
+        "name": "徐秉鴻",
+        "role": "實習總召 / 實習校長 / 低年級組長",
+        "dept": "科學教育暨環境教育研究所"
+      },
+      {
+        "name": "吳俋達",
+        "role": "實習副校長 / 高年級組長",
+        "dept": "軟體工程學系"
+      },
+      {
+        "name": "鄭凱瀚",
+        "role": "實習副校長 / 中年級組長",
+        "dept": "中山大學劇場藝術學系"
+      },
+      {
+        "name": "吳依潔",
+        "role": "低年級副組長",
+        "dept": "教育學系碩士班"
+      },
+      {
+        "name": "易冠蓁",
+        "role": "高年級副組長",
+        "dept": "軟體工程研究所"
+      },
+      {
+        "name": "李沛錞",
+        "role": "中年級副組長 / 卡片長",
+        "dept": "東南亞學系碩士班"
+      },
+      {
+        "name": "林芳妤",
+        "role": "休業式主持人 / 典禮主控",
+        "dept": "教育學系"
+      },
+      {
+        "name": "洪瑋伶",
+        "role": "休業式主持人 / 活動策劃",
+        "dept": "教育學系"
+      }
+    ],
+    "eightDivisions": [
+      {
+        "name": "總召統籌組",
+        "lead": "徐秉鴻、吳俋達、鄭凱瀚",
+        "duty": "實習全盤行程協調、雙校溝通、會議召集、休業式流程控管與各組監督"
+      },
+      {
+        "name": "典禮主持組",
+        "lead": "林芳妤、洪瑋伶",
+        "duty": "主持稿撰寫、開場與串場引言、氣氛調控、引導師長致詞與頒獎"
+      },
+      {
+        "name": "公關禮賓組",
+        "lead": "易冠蓁、吳依潔",
+        "duty": "師長席卡名牌製作、迎賓接待、長官入席引導與貴賓茶水安排"
+      },
+      {
+        "name": "主視覺與影音組",
+        "lead": "李沛錞、蔡承軒",
+        "duty": "52Hz藍鯨主視覺卡繪製、海報設計、回顧影片剪輯與簡報排版"
+      },
+      {
+        "name": "攝影紀錄組",
+        "lead": "羅渝傑、賴泓均、張育瑄",
+        "duty": "典禮全程動靜態攝影、各班實習花絮紀錄與影像檔案彙整歸檔"
+      },
+      {
+        "name": "會場總務組",
+        "lead": "丁云翔、曾郁涵、王品貴",
+        "duty": "會議室桌椅排列佈置、茶點禮盒採購、會後場地復原與清潔"
+      },
+      {
+        "name": "課務聯絡組",
+        "lead": "陳嬿亘、曾麗萍、蔡佳芸",
+        "duty": "入班公假表單彙整、各班輔導教師聯絡、試教日程表對接"
+      },
+      {
+        "name": "研討議程組",
+        "lead": "司亦妍、南雅娟、余青黛、張浚祐、邱靖雯、陳新絜",
+        "duty": "試教互評表彙整、評委講評重點紀錄、手札繳交追蹤與議課紀錄"
+      }
+    ]
+  },
+  "extraGalleries": {
+    "startCeremony": [
+      {
+        "id": "start_1",
+        "folder": "start",
+        "file": "start_0_二年八班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_0_%E4%BA%8C%E5%B9%B4%E5%85%AB%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "二年八班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_2",
+        "folder": "start",
+        "file": "start_10_四年八班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_10_%E5%9B%9B%E5%B9%B4%E5%85%AB%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "四年八班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_3",
+        "folder": "start",
+        "file": "start_11_四年十二班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_11_%E5%9B%9B%E5%B9%B4%E5%8D%81%E4%BA%8C%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "四年十二班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_4",
+        "folder": "start",
+        "file": "start_12_始業式各組實習教師合照03.jpg",
+        "relPath": "assets/images/start/start_12_%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%90%84%E7%B5%84%E5%AF%A6%E7%BF%92%E6%95%99%E5%B8%AB%E5%90%88%E7%85%A703.jpg",
+        "title": "始業式各組實習教師合照03",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_5",
+        "folder": "start",
+        "file": "start_13_始業式各組實習教師合照01.jpg",
+        "relPath": "assets/images/start/start_13_%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%90%84%E7%B5%84%E5%AF%A6%E7%BF%92%E6%95%99%E5%B8%AB%E5%90%88%E7%85%A701.jpg",
+        "title": "始業式各組實習教師合照01",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_6",
+        "folder": "start",
+        "file": "start_14_始業式各組實習教師合照04.jpg",
+        "relPath": "assets/images/start/start_14_%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%90%84%E7%B5%84%E5%AF%A6%E7%BF%92%E6%95%99%E5%B8%AB%E5%90%88%E7%85%A704.jpg",
+        "title": "始業式各組實習教師合照04",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_7",
+        "folder": "start",
+        "file": "start_15_始業式各組實習教師合照02.jpg",
+        "relPath": "assets/images/start/start_15_%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%90%84%E7%B5%84%E5%AF%A6%E7%BF%92%E6%95%99%E5%B8%AB%E5%90%88%E7%85%A702.jpg",
+        "title": "始業式各組實習教師合照02",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_8",
+        "folder": "start",
+        "file": "start_16_始業式全體實習師生大合影03.jpg",
+        "relPath": "assets/images/start/start_16_%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%A8%E9%AB%94%E5%AF%A6%E7%BF%92%E5%B8%AB%E7%94%9F%E5%A4%A7%E5%90%88%E5%BD%B103.jpg",
+        "title": "始業式全體實習師生大合影03",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_9",
+        "folder": "start",
+        "file": "start_17_始業式全體實習師生大合影02.jpg",
+        "relPath": "assets/images/start/start_17_%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%A8%E9%AB%94%E5%AF%A6%E7%BF%92%E5%B8%AB%E7%94%9F%E5%A4%A7%E5%90%88%E5%BD%B102.jpg",
+        "title": "始業式全體實習師生大合影02",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_10",
+        "folder": "start",
+        "file": "start_18_始業式全體實習師生大合影01.jpg",
+        "relPath": "assets/images/start/start_18_%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%A8%E9%AB%94%E5%AF%A6%E7%BF%92%E5%B8%AB%E7%94%9F%E5%A4%A7%E5%90%88%E5%BD%B101.jpg",
+        "title": "始業式全體實習師生大合影01",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_11",
+        "folder": "start",
+        "file": "start_19_四維國小實習始業式典禮04.jpg",
+        "relPath": "assets/images/start/start_19_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE04.jpg",
+        "title": "四維國小實習始業式典禮04",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_12",
+        "folder": "start",
+        "file": "start_1_二年十班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_1_%E4%BA%8C%E5%B9%B4%E5%8D%81%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "二年十班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_13",
+        "folder": "start",
+        "file": "start_20_四維國小實習始業式典禮05.jpg",
+        "relPath": "assets/images/start/start_20_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE05.jpg",
+        "title": "四維國小實習始業式典禮05",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_14",
+        "folder": "start",
+        "file": "start_21_四維國小實習始業式典禮13.jpg",
+        "relPath": "assets/images/start/start_21_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE13.jpg",
+        "title": "四維國小實習始業式典禮13",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_15",
+        "folder": "start",
+        "file": "start_22_四維國小實習始業式典禮15.jpg",
+        "relPath": "assets/images/start/start_22_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE15.jpg",
+        "title": "四維國小實習始業式典禮15",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_16",
+        "folder": "start",
+        "file": "start_23_四維國小實習始業式典禮14.jpg",
+        "relPath": "assets/images/start/start_23_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE14.jpg",
+        "title": "四維國小實習始業式典禮14",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_17",
+        "folder": "start",
+        "file": "start_24_四維國小實習始業式典禮08.jpg",
+        "relPath": "assets/images/start/start_24_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE08.jpg",
+        "title": "四維國小實習始業式典禮08",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_18",
+        "folder": "start",
+        "file": "start_25_四維國小實習始業式典禮12.jpg",
+        "relPath": "assets/images/start/start_25_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE12.jpg",
+        "title": "四維國小實習始業式典禮12",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_19",
+        "folder": "start",
+        "file": "start_26_四維國小實習始業式典禮03.jpg",
+        "relPath": "assets/images/start/start_26_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE03.jpg",
+        "title": "四維國小實習始業式典禮03",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_20",
+        "folder": "start",
+        "file": "start_27_四維國小實習始業式典禮06.jpg",
+        "relPath": "assets/images/start/start_27_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE06.jpg",
+        "title": "四維國小實習始業式典禮06",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_21",
+        "folder": "start",
+        "file": "start_28_四維國小實習始業式典禮02.jpg",
+        "relPath": "assets/images/start/start_28_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE02.jpg",
+        "title": "四維國小實習始業式典禮02",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_22",
+        "folder": "start",
+        "file": "start_29_四維國小實習始業式典禮11.jpg",
+        "relPath": "assets/images/start/start_29_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE11.jpg",
+        "title": "四維國小實習始業式典禮11",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_23",
+        "folder": "start",
+        "file": "start_2_二年七班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_2_%E4%BA%8C%E5%B9%B4%E4%B8%83%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "二年七班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_24",
+        "folder": "start",
+        "file": "start_30_四維國小實習始業式典禮09.jpg",
+        "relPath": "assets/images/start/start_30_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE09.jpg",
+        "title": "四維國小實習始業式典禮09",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_25",
+        "folder": "start",
+        "file": "start_31_四維國小實習始業式典禮10.jpg",
+        "relPath": "assets/images/start/start_31_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE10.jpg",
+        "title": "四維國小實習始業式典禮10",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_26",
+        "folder": "start",
+        "file": "start_32_四維國小實習始業式典禮07.jpg",
+        "relPath": "assets/images/start/start_32_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE07.jpg",
+        "title": "四維國小實習始業式典禮07",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_27",
+        "folder": "start",
+        "file": "start_33_四維國小實習始業式典禮16.jpg",
+        "relPath": "assets/images/start/start_33_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE16.jpg",
+        "title": "四維國小實習始業式典禮16",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_28",
+        "folder": "start",
+        "file": "start_34_四維國小實習始業式典禮17.jpg",
+        "relPath": "assets/images/start/start_34_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE17.jpg",
+        "title": "四維國小實習始業式典禮17",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_29",
+        "folder": "start",
+        "file": "start_35_四維國小實習始業式典禮01.jpg",
+        "relPath": "assets/images/start/start_35_%E5%9B%9B%E7%B6%AD%E5%9C%8B%E5%B0%8F%E5%AF%A6%E7%BF%92%E5%A7%8B%E6%A5%AD%E5%BC%8F%E5%85%B8%E7%A6%AE01.jpg",
+        "title": "四維國小實習始業式典禮01",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_30",
+        "folder": "start",
+        "file": "start_3_六年十班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_3_%E5%85%AD%E5%B9%B4%E5%8D%81%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "六年十班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_31",
+        "folder": "start",
+        "file": "start_4_五年九班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_4_%E4%BA%94%E5%B9%B4%E4%B9%9D%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "五年九班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_32",
+        "folder": "start",
+        "file": "start_5_六年五班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_5_%E5%85%AD%E5%B9%B4%E4%BA%94%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "六年五班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_33",
+        "folder": "start",
+        "file": "start_6_五年五班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_6_%E4%BA%94%E5%B9%B4%E4%BA%94%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "五年五班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_34",
+        "folder": "start",
+        "file": "start_7_六年九班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_7_%E5%85%AD%E5%B9%B4%E4%B9%9D%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "六年九班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_35",
+        "folder": "start",
+        "file": "start_8_四年六班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_8_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "四年六班入班介紹實習老師",
+        "category": "始業式啟航"
+      },
+      {
+        "id": "start_36",
+        "folder": "start",
+        "file": "start_9_四年十班入班介紹實習老師.jpg",
+        "relPath": "assets/images/start/start_9_%E5%9B%9B%E5%B9%B4%E5%8D%81%E7%8F%AD%E5%85%A5%E7%8F%AD%E4%BB%8B%E7%B4%B9%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB.jpg",
+        "title": "四年十班入班介紹實習老師",
+        "category": "始業式啟航"
+      }
+    ],
+    "dialogueMeet": [
+      {
+        "id": "dialogue_1",
+        "folder": "dialogue",
+        "file": "dialogue_0_4-10張浚祐余青黛入班對話合影.jpg",
+        "relPath": "assets/images/dialogue/dialogue_0_4-10%E5%BC%B5%E6%B5%9A%E7%A5%90%E4%BD%99%E9%9D%92%E9%BB%9B%E5%85%A5%E7%8F%AD%E5%B0%8D%E8%A9%B1%E5%90%88%E5%BD%B1.jpg",
+        "title": "4-10張浚祐余青黛入班對話合影",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_2",
+        "folder": "dialogue",
+        "file": "dialogue_10_實習老師徐秉鴻蔡承軒拜訪導師合影02.jpg",
+        "relPath": "assets/images/dialogue/dialogue_10_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E5%BE%90%E7%A7%89%E9%B4%BB%E8%94%A1%E6%89%BF%E8%BB%92%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B102.jpg",
+        "title": "實習老師徐秉鴻蔡承軒拜訪導師合影02",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_3",
+        "folder": "dialogue",
+        "file": "dialogue_11_實習老師徐秉鴻蔡承軒拜訪導師合影01.jpg",
+        "relPath": "assets/images/dialogue/dialogue_11_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E5%BE%90%E7%A7%89%E9%B4%BB%E8%94%A1%E6%89%BF%E8%BB%92%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg",
+        "title": "實習老師徐秉鴻蔡承軒拜訪導師合影01",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_4",
+        "folder": "dialogue",
+        "file": "dialogue_12_實習老師林芳妤羅渝傑拜訪導師合影01.jpg",
+        "relPath": "assets/images/dialogue/dialogue_12_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E6%9E%97%E8%8A%B3%E5%A6%A4%E7%BE%85%E6%B8%9D%E5%82%91%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg",
+        "title": "實習老師林芳妤羅渝傑拜訪導師合影01",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_5",
+        "folder": "dialogue",
+        "file": "dialogue_13_實習老師易冠蓁吳俋達拜訪導師合影01.jpg",
+        "relPath": "assets/images/dialogue/dialogue_13_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E6%98%93%E5%86%A0%E8%93%81%E5%90%B3%E4%BF%8B%E9%81%94%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg",
+        "title": "實習老師易冠蓁吳俋達拜訪導師合影01",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_6",
+        "folder": "dialogue",
+        "file": "dialogue_14_5年9班_教育四司亦妍、教育四洪瑋伶.jpg",
+        "relPath": "assets/images/dialogue/dialogue_14_5%E5%B9%B49%E7%8F%AD_%E6%95%99%E8%82%B2%E5%9B%9B%E5%8F%B8%E4%BA%A6%E5%A6%8D%E3%80%81%E6%95%99%E8%82%B2%E5%9B%9B%E6%B4%AA%E7%91%8B%E4%BC%B6.jpg",
+        "title": "5年9班 教育四司亦妍、教育四洪瑋伶",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_7",
+        "folder": "dialogue",
+        "file": "dialogue_1_11_10拜訪4年13班_黃淑芬老師：東南亞學碩三李沛錞、中山戲劇四鄭凱瀚.jpg",
+        "relPath": "assets/images/dialogue/dialogue_1_11_10%E6%8B%9C%E8%A8%AA4%E5%B9%B413%E7%8F%AD_%E9%BB%83%E6%B7%91%E8%8A%AC%E8%80%81%E5%B8%AB%EF%BC%9A%E6%9D%B1%E5%8D%97%E4%BA%9E%E5%AD%B8%E7%A2%A9%E4%B8%89%E6%9D%8E%E6%B2%9B%E9%8C%9E%E3%80%81%E4%B8%AD%E5%B1%B1%E6%88%B2%E5%8A%87%E5%9B%9B%E9%84%AD%E5%87%B1%E7%80%9A.jpg",
+        "title": "11 10拜訪4年13班 黃淑芬老師：東南亞學碩三李沛錞、中山戲劇四鄭凱瀚",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_8",
+        "folder": "dialogue",
+        "file": "dialogue_2_班級榮譽榜佈置.jpg",
+        "relPath": "assets/images/dialogue/dialogue_2_%E7%8F%AD%E7%B4%9A%E6%A6%AE%E8%AD%BD%E6%A6%9C%E4%BD%88%E7%BD%AE.jpg",
+        "title": "班級榮譽榜佈置",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_9",
+        "folder": "dialogue",
+        "file": "dialogue_3_4-8曾郁涵、丁云翔入班合影.jpg",
+        "relPath": "assets/images/dialogue/dialogue_3_4-8%E6%9B%BE%E9%83%81%E6%B6%B5%E3%80%81%E4%B8%81%E4%BA%91%E7%BF%94%E5%85%A5%E7%8F%AD%E5%90%88%E5%BD%B1.jpg",
+        "title": "4-8曾郁涵、丁云翔入班合影",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_10",
+        "folder": "dialogue",
+        "file": "dialogue_4_實習老師王品貴張育瑄拜訪導師合影01.jpg",
+        "relPath": "assets/images/dialogue/dialogue_4_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E7%8E%8B%E5%93%81%E8%B2%B4%E5%BC%B5%E8%82%B2%E7%91%84%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg",
+        "title": "實習老師王品貴張育瑄拜訪導師合影01",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_11",
+        "folder": "dialogue",
+        "file": "dialogue_5_實習教師入班對話拜訪導師合影01.jpg",
+        "relPath": "assets/images/dialogue/dialogue_5_%E5%AF%A6%E7%BF%92%E6%95%99%E5%B8%AB%E5%85%A5%E7%8F%AD%E5%B0%8D%E8%A9%B1%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg",
+        "title": "實習教師入班對話拜訪導師合影01",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_12",
+        "folder": "dialogue",
+        "file": "dialogue_6_實習老師吳依潔蔡佳芸拜訪導師合影01.jpg",
+        "relPath": "assets/images/dialogue/dialogue_6_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E5%90%B3%E4%BE%9D%E6%BD%94%E8%94%A1%E4%BD%B3%E8%8A%B8%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg",
+        "title": "實習老師吳依潔蔡佳芸拜訪導師合影01",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_13",
+        "folder": "dialogue",
+        "file": "dialogue_7_實習老師吳依潔蔡佳芸拜訪導師合影02.jpg",
+        "relPath": "assets/images/dialogue/dialogue_7_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E5%90%B3%E4%BE%9D%E6%BD%94%E8%94%A1%E4%BD%B3%E8%8A%B8%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B102.jpg",
+        "title": "實習老師吳依潔蔡佳芸拜訪導師合影02",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_14",
+        "folder": "dialogue",
+        "file": "dialogue_8_實習老師曾麗萍陳嬿亘拜訪導師合影02.jpg",
+        "relPath": "assets/images/dialogue/dialogue_8_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E6%9B%BE%E9%BA%97%E8%90%8D%E9%99%B3%E5%AC%BF%E4%BA%98%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B102.jpg",
+        "title": "實習老師曾麗萍陳嬿亘拜訪導師合影02",
+        "category": "入班對話見習"
+      },
+      {
+        "id": "dialogue_15",
+        "folder": "dialogue",
+        "file": "dialogue_9_實習老師曾麗萍陳嬿亘拜訪導師合影01.jpg",
+        "relPath": "assets/images/dialogue/dialogue_9_%E5%AF%A6%E7%BF%92%E8%80%81%E5%B8%AB%E6%9B%BE%E9%BA%97%E8%90%8D%E9%99%B3%E5%AC%BF%E4%BA%98%E6%8B%9C%E8%A8%AA%E5%B0%8E%E5%B8%AB%E5%90%88%E5%BD%B101.jpg",
+        "title": "實習老師曾麗萍陳嬿亘拜訪導師合影01",
+        "category": "入班對話見習"
+      }
+    ],
+    "teachingLive": [
+      {
+        "id": "teaching_1",
+        "folder": "teaching",
+        "file": "teach_0_四年六班試教課堂與觀議課交流03.jpg",
+        "relPath": "assets/images/teaching/teach_0_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8103.jpg",
+        "title": "四年六班試教課堂與觀議課交流03",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_2",
+        "folder": "teaching",
+        "file": "teach_10_四年六班試教課堂與觀議課交流01.jpg",
+        "relPath": "assets/images/teaching/teach_10_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8101.jpg",
+        "title": "四年六班試教課堂與觀議課交流01",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_3",
+        "folder": "teaching",
+        "file": "teach_11_四年六班試教課堂與觀議課交流02.jpg",
+        "relPath": "assets/images/teaching/teach_11_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8102.jpg",
+        "title": "四年六班試教課堂與觀議課交流02",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_4",
+        "folder": "teaching",
+        "file": "teach_12_四年六班試教課堂與觀議課交流48.jpg",
+        "relPath": "assets/images/teaching/teach_12_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8148.jpg",
+        "title": "四年六班試教課堂與觀議課交流48",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_5",
+        "folder": "teaching",
+        "file": "teach_13_四年六班試教課堂與觀議課交流06.jpg",
+        "relPath": "assets/images/teaching/teach_13_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8106.jpg",
+        "title": "四年六班試教課堂與觀議課交流06",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_6",
+        "folder": "teaching",
+        "file": "teach_14_四年六班試教課堂與觀議課交流31.jpg",
+        "relPath": "assets/images/teaching/teach_14_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8131.jpg",
+        "title": "四年六班試教課堂與觀議課交流31",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_7",
+        "folder": "teaching",
+        "file": "teach_15_四年六班試教課堂與觀議課交流04.jpg",
+        "relPath": "assets/images/teaching/teach_15_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8104.jpg",
+        "title": "四年六班試教課堂與觀議課交流04",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_8",
+        "folder": "teaching",
+        "file": "teach_16_四年六班試教課堂與觀議課交流46.jpg",
+        "relPath": "assets/images/teaching/teach_16_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8146.jpg",
+        "title": "四年六班試教課堂與觀議課交流46",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_9",
+        "folder": "teaching",
+        "file": "teach_17_四年六班試教課堂與觀議課交流33.jpg",
+        "relPath": "assets/images/teaching/teach_17_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8133.jpg",
+        "title": "四年六班試教課堂與觀議課交流33",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_10",
+        "folder": "teaching",
+        "file": "teach_18_四年六班試教課堂與觀議課交流07.jpg",
+        "relPath": "assets/images/teaching/teach_18_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8107.jpg",
+        "title": "四年六班試教課堂與觀議課交流07",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_11",
+        "folder": "teaching",
+        "file": "teach_19_四年六班試教課堂與觀議課交流20.jpg",
+        "relPath": "assets/images/teaching/teach_19_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8120.jpg",
+        "title": "四年六班試教課堂與觀議課交流20",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_12",
+        "folder": "teaching",
+        "file": "teach_1_四年六班試教課堂與觀議課交流38.jpg",
+        "relPath": "assets/images/teaching/teach_1_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8138.jpg",
+        "title": "四年六班試教課堂與觀議課交流38",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_13",
+        "folder": "teaching",
+        "file": "teach_20_四年六班試教課堂與觀議課交流27.jpg",
+        "relPath": "assets/images/teaching/teach_20_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8127.jpg",
+        "title": "四年六班試教課堂與觀議課交流27",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_14",
+        "folder": "teaching",
+        "file": "teach_21_四年六班試教課堂與觀議課交流09.jpg",
+        "relPath": "assets/images/teaching/teach_21_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8109.jpg",
+        "title": "四年六班試教課堂與觀議課交流09",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_15",
+        "folder": "teaching",
+        "file": "teach_22_四年六班試教課堂與觀議課交流22.jpg",
+        "relPath": "assets/images/teaching/teach_22_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8122.jpg",
+        "title": "四年六班試教課堂與觀議課交流22",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_16",
+        "folder": "teaching",
+        "file": "teach_23_四年六班試教課堂與觀議課交流44.jpg",
+        "relPath": "assets/images/teaching/teach_23_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8144.jpg",
+        "title": "四年六班試教課堂與觀議課交流44",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_17",
+        "folder": "teaching",
+        "file": "teach_24_四年六班試教課堂與觀議課交流12.jpg",
+        "relPath": "assets/images/teaching/teach_24_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8112.jpg",
+        "title": "四年六班試教課堂與觀議課交流12",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_18",
+        "folder": "teaching",
+        "file": "teach_25_四年六班試教課堂與觀議課交流42.jpg",
+        "relPath": "assets/images/teaching/teach_25_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8142.jpg",
+        "title": "四年六班試教課堂與觀議課交流42",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_19",
+        "folder": "teaching",
+        "file": "teach_26_四年六班試教課堂與觀議課交流41.jpg",
+        "relPath": "assets/images/teaching/teach_26_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8141.jpg",
+        "title": "四年六班試教課堂與觀議課交流41",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_20",
+        "folder": "teaching",
+        "file": "teach_27_四年六班試教課堂與觀議課交流14.jpg",
+        "relPath": "assets/images/teaching/teach_27_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8114.jpg",
+        "title": "四年六班試教課堂與觀議課交流14",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_21",
+        "folder": "teaching",
+        "file": "teach_28_四年六班試教課堂與觀議課交流18.jpg",
+        "relPath": "assets/images/teaching/teach_28_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8118.jpg",
+        "title": "四年六班試教課堂與觀議課交流18",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_22",
+        "folder": "teaching",
+        "file": "teach_29_四年六班試教課堂與觀議課交流05.jpg",
+        "relPath": "assets/images/teaching/teach_29_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8105.jpg",
+        "title": "四年六班試教課堂與觀議課交流05",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_23",
+        "folder": "teaching",
+        "file": "teach_2_四年六班試教課堂與觀議課交流28.jpg",
+        "relPath": "assets/images/teaching/teach_2_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8128.jpg",
+        "title": "四年六班試教課堂與觀議課交流28",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_24",
+        "folder": "teaching",
+        "file": "teach_30_四年六班試教課堂與觀議課交流08.jpg",
+        "relPath": "assets/images/teaching/teach_30_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8108.jpg",
+        "title": "四年六班試教課堂與觀議課交流08",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_25",
+        "folder": "teaching",
+        "file": "teach_31_四年六班試教課堂與觀議課交流11.jpg",
+        "relPath": "assets/images/teaching/teach_31_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8111.jpg",
+        "title": "四年六班試教課堂與觀議課交流11",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_26",
+        "folder": "teaching",
+        "file": "teach_32_四年六班試教課堂與觀議課交流43.jpg",
+        "relPath": "assets/images/teaching/teach_32_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8143.jpg",
+        "title": "四年六班試教課堂與觀議課交流43",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_27",
+        "folder": "teaching",
+        "file": "teach_33_四年六班試教課堂與觀議課交流19.jpg",
+        "relPath": "assets/images/teaching/teach_33_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8119.jpg",
+        "title": "四年六班試教課堂與觀議課交流19",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_28",
+        "folder": "teaching",
+        "file": "teach_34_四年六班試教課堂與觀議課交流47.jpg",
+        "relPath": "assets/images/teaching/teach_34_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8147.jpg",
+        "title": "四年六班試教課堂與觀議課交流47",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_29",
+        "folder": "teaching",
+        "file": "teach_35_四年六班試教課堂與觀議課交流34.jpg",
+        "relPath": "assets/images/teaching/teach_35_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8134.jpg",
+        "title": "四年六班試教課堂與觀議課交流34",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_30",
+        "folder": "teaching",
+        "file": "teach_36_四年六班試教課堂與觀議課交流25.jpg",
+        "relPath": "assets/images/teaching/teach_36_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8125.jpg",
+        "title": "四年六班試教課堂與觀議課交流25",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_31",
+        "folder": "teaching",
+        "file": "teach_37_四年六班試教課堂與觀議課交流21.jpg",
+        "relPath": "assets/images/teaching/teach_37_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8121.jpg",
+        "title": "四年六班試教課堂與觀議課交流21",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_32",
+        "folder": "teaching",
+        "file": "teach_38_四年六班試教課堂與觀議課交流50.jpg",
+        "relPath": "assets/images/teaching/teach_38_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8150.jpg",
+        "title": "四年六班試教課堂與觀議課交流50",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_33",
+        "folder": "teaching",
+        "file": "teach_39_四年六班試教課堂與觀議課交流37.jpg",
+        "relPath": "assets/images/teaching/teach_39_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8137.jpg",
+        "title": "四年六班試教課堂與觀議課交流37",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_34",
+        "folder": "teaching",
+        "file": "teach_3_四年六班試教課堂與觀議課交流26.jpg",
+        "relPath": "assets/images/teaching/teach_3_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8126.jpg",
+        "title": "四年六班試教課堂與觀議課交流26",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_35",
+        "folder": "teaching",
+        "file": "teach_40_四年六班試教課堂與觀議課交流29.jpg",
+        "relPath": "assets/images/teaching/teach_40_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8129.jpg",
+        "title": "四年六班試教課堂與觀議課交流29",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_36",
+        "folder": "teaching",
+        "file": "teach_41_四年六班試教課堂與觀議課交流24.jpg",
+        "relPath": "assets/images/teaching/teach_41_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8124.jpg",
+        "title": "四年六班試教課堂與觀議課交流24",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_37",
+        "folder": "teaching",
+        "file": "teach_42_四年六班試教課堂與觀議課交流16.jpg",
+        "relPath": "assets/images/teaching/teach_42_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8116.jpg",
+        "title": "四年六班試教課堂與觀議課交流16",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_38",
+        "folder": "teaching",
+        "file": "teach_43_四年六班試教課堂與觀議課交流13.jpg",
+        "relPath": "assets/images/teaching/teach_43_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8113.jpg",
+        "title": "四年六班試教課堂與觀議課交流13",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_39",
+        "folder": "teaching",
+        "file": "teach_44_四年六班試教課堂與觀議課交流10.jpg",
+        "relPath": "assets/images/teaching/teach_44_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8110.jpg",
+        "title": "四年六班試教課堂與觀議課交流10",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_40",
+        "folder": "teaching",
+        "file": "teach_45_四年六班試教課堂與觀議課交流39.jpg",
+        "relPath": "assets/images/teaching/teach_45_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8139.jpg",
+        "title": "四年六班試教課堂與觀議課交流39",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_41",
+        "folder": "teaching",
+        "file": "teach_46_四年六班試教課堂與觀議課交流15.jpg",
+        "relPath": "assets/images/teaching/teach_46_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8115.jpg",
+        "title": "四年六班試教課堂與觀議課交流15",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_42",
+        "folder": "teaching",
+        "file": "teach_47_四年六班試教課堂與觀議課交流49.jpg",
+        "relPath": "assets/images/teaching/teach_47_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8149.jpg",
+        "title": "四年六班試教課堂與觀議課交流49",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_43",
+        "folder": "teaching",
+        "file": "teach_48_四年六班試教課堂與觀議課交流45.jpg",
+        "relPath": "assets/images/teaching/teach_48_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8145.jpg",
+        "title": "四年六班試教課堂與觀議課交流45",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_44",
+        "folder": "teaching",
+        "file": "teach_49_四年六班試教課堂與觀議課交流35.jpg",
+        "relPath": "assets/images/teaching/teach_49_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8135.jpg",
+        "title": "四年六班試教課堂與觀議課交流35",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_45",
+        "folder": "teaching",
+        "file": "teach_4_四年六班試教課堂與觀議課交流32.jpg",
+        "relPath": "assets/images/teaching/teach_4_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8132.jpg",
+        "title": "四年六班試教課堂與觀議課交流32",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_46",
+        "folder": "teaching",
+        "file": "teach_5_四年六班試教課堂與觀議課交流40.jpg",
+        "relPath": "assets/images/teaching/teach_5_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8140.jpg",
+        "title": "四年六班試教課堂與觀議課交流40",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_47",
+        "folder": "teaching",
+        "file": "teach_6_四年六班試教課堂與觀議課交流23.jpg",
+        "relPath": "assets/images/teaching/teach_6_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8123.jpg",
+        "title": "四年六班試教課堂與觀議課交流23",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_48",
+        "folder": "teaching",
+        "file": "teach_7_四年六班試教課堂與觀議課交流36.jpg",
+        "relPath": "assets/images/teaching/teach_7_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8136.jpg",
+        "title": "四年六班試教課堂與觀議課交流36",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_49",
+        "folder": "teaching",
+        "file": "teach_8_四年六班試教課堂與觀議課交流17.jpg",
+        "relPath": "assets/images/teaching/teach_8_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8117.jpg",
+        "title": "四年六班試教課堂與觀議課交流17",
+        "category": "課堂教學與觀議課"
+      },
+      {
+        "id": "teaching_50",
+        "folder": "teaching",
+        "file": "teach_9_四年六班試教課堂與觀議課交流30.jpg",
+        "relPath": "assets/images/teaching/teach_9_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E8%A9%A6%E6%95%99%E8%AA%B2%E5%A0%82%E8%88%87%E8%A7%80%E8%AD%B0%E8%AA%B2%E4%BA%A4%E6%B5%8130.jpg",
+        "title": "四年六班試教課堂與觀議課交流30",
+        "category": "課堂教學與觀議課"
+      }
+    ],
+    "studentCards": [
+      {
+        "id": "cards_1",
+        "folder": "cards",
+        "file": "card_0_四年六班學生手繪給沛錞老師感恩卡46.jpg",
+        "relPath": "assets/images/cards/card_0_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A146.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡46",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_2",
+        "folder": "cards",
+        "file": "card_10_四年六班學生手繪給沛錞老師感恩卡18.jpg",
+        "relPath": "assets/images/cards/card_10_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A118.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡18",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_3",
+        "folder": "cards",
+        "file": "card_11_四年六班學生手繪給沛錞老師感恩卡52.jpg",
+        "relPath": "assets/images/cards/card_11_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A152.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡52",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_4",
+        "folder": "cards",
+        "file": "card_12_四年六班學生手繪給沛錞老師感恩卡08.jpg",
+        "relPath": "assets/images/cards/card_12_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A108.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡08",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_5",
+        "folder": "cards",
+        "file": "card_13_四年六班學生手繪給沛錞老師感恩卡32.jpg",
+        "relPath": "assets/images/cards/card_13_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A132.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡32",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_6",
+        "folder": "cards",
+        "file": "card_14_四年六班學生手繪給沛錞老師感恩卡14.jpg",
+        "relPath": "assets/images/cards/card_14_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A114.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡14",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_7",
+        "folder": "cards",
+        "file": "card_15_四年六班學生手繪給沛錞老師感恩卡34.jpg",
+        "relPath": "assets/images/cards/card_15_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A134.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡34",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_8",
+        "folder": "cards",
+        "file": "card_16_四年六班學生手繪給沛錞老師感恩卡24.jpg",
+        "relPath": "assets/images/cards/card_16_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A124.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡24",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_9",
+        "folder": "cards",
+        "file": "card_17_四年六班學生手繪給沛錞老師感恩卡42.jpg",
+        "relPath": "assets/images/cards/card_17_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A142.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡42",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_10",
+        "folder": "cards",
+        "file": "card_18_四年六班學生手繪給沛錞老師感恩卡49.jpg",
+        "relPath": "assets/images/cards/card_18_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A149.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡49",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_11",
+        "folder": "cards",
+        "file": "card_19_四年六班學生手繪給沛錞老師感恩卡22.jpg",
+        "relPath": "assets/images/cards/card_19_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A122.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡22",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_12",
+        "folder": "cards",
+        "file": "card_1_四年六班學生手繪給沛錞老師感恩卡38.jpg",
+        "relPath": "assets/images/cards/card_1_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A138.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡38",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_13",
+        "folder": "cards",
+        "file": "card_20_四年六班學生手繪給沛錞老師感恩卡28.jpg",
+        "relPath": "assets/images/cards/card_20_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A128.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡28",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_14",
+        "folder": "cards",
+        "file": "card_21_四年六班學生手繪給沛錞老師感恩卡02.jpg",
+        "relPath": "assets/images/cards/card_21_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A102.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡02",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_15",
+        "folder": "cards",
+        "file": "card_22_四年六班學生手繪給沛錞老師感恩卡36.jpg",
+        "relPath": "assets/images/cards/card_22_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A136.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡36",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_16",
+        "folder": "cards",
+        "file": "card_23_四年六班學生手繪給沛錞老師感恩卡39.jpg",
+        "relPath": "assets/images/cards/card_23_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A139.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡39",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_17",
+        "folder": "cards",
+        "file": "card_2_四年六班學生手繪給沛錞老師感恩卡48.jpg",
+        "relPath": "assets/images/cards/card_2_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A148.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡48",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_18",
+        "folder": "cards",
+        "file": "card_3_四年六班學生手繪給沛錞老師感恩卡50.jpg",
+        "relPath": "assets/images/cards/card_3_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A150.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡50",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_19",
+        "folder": "cards",
+        "file": "card_4_四年六班學生手繪給沛錞老師感恩卡31.jpg",
+        "relPath": "assets/images/cards/card_4_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A131.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡31",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_20",
+        "folder": "cards",
+        "file": "card_5_四年六班學生手繪給沛錞老師感恩卡10.jpg",
+        "relPath": "assets/images/cards/card_5_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A110.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡10",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_21",
+        "folder": "cards",
+        "file": "card_6_四年六班學生手繪給沛錞老師感恩卡44.jpg",
+        "relPath": "assets/images/cards/card_6_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A144.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡44",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_22",
+        "folder": "cards",
+        "file": "card_7_四年六班學生手繪給沛錞老師感恩卡20.jpg",
+        "relPath": "assets/images/cards/card_7_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A120.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡20",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_23",
+        "folder": "cards",
+        "file": "card_8_四年六班學生手繪給沛錞老師感恩卡30.jpg",
+        "relPath": "assets/images/cards/card_8_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A130.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡30",
+        "category": "406學童手繪暖心卡"
+      },
+      {
+        "id": "cards_24",
+        "folder": "cards",
+        "file": "card_9_四年六班學生手繪給沛錞老師感恩卡06.jpg",
+        "relPath": "assets/images/cards/card_9_%E5%9B%9B%E5%B9%B4%E5%85%AD%E7%8F%AD%E5%AD%B8%E7%94%9F%E6%89%8B%E7%B9%AA%E7%B5%A6%E6%B2%9B%E9%8C%9E%E8%80%81%E5%B8%AB%E6%84%9F%E6%81%A9%E5%8D%A106.jpg",
+        "title": "四年六班學生手繪給沛錞老師感恩卡06",
+        "category": "406學童手繪暖心卡"
+      }
+    ]
+  }
+};
